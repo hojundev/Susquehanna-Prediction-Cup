@@ -1,0 +1,5 @@
+#!/bin/sh
+# Run the bot from the project folder without relying on the editable-install
+# .pth file (macOS sometimes marks it hidden, and Python 3.13 then skips it).
+cd "$(dirname "$0")" || exit 1
+PYTHONPATH="$PWD/src${PYTHONPATH:+:$PYTHONPATH}" exec .venv/bin/python -m supermarket_bot "$@"

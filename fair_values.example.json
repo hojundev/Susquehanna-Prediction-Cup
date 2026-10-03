@@ -1,0 +1,6 @@
+{
+  "_comment": "exchangeId -> your estimate that YES resolves true. Get ids from `supermarket-bot markets`. Optional: confidence (0-1, scales size, default 0.5) and lean ('D' or 'R': the party a YES outcome favours, used by the correlation cap). Keys starting with _ are ignored. The file is re-read every cycle.",
+  "12345": { "probability": 0.62, "confidence": 0.7, "lean": "D" },
+  "12346": { "probability": 0.35, "confidence": 0.5, "lean": "R" },
+  "12347": 0.4
+}
