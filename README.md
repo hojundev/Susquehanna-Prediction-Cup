@@ -144,6 +144,39 @@ true, plus optional `confidence` and `lean`. See `fair_values.example.json`. It
 overrides outside prices for any exchange it lists. The file is re-read every cycle.
 If it becomes unreadable, the last good values are kept.
 
+## Market making (optional, off by default)
+
+With `SUPERMARKET_MAKER_ENABLED=true`, each cycle the bot also rests two limit
+orders on up to `MAKER_MAX_MARKETS` exchanges that have a fair value:
+
+- a YES bid at about `fair - MAKER_HALF_SPREAD`;
+- a YES ask at about `fair + MAKER_HALF_SPREAD`, sent as a NO buy at `1 - ask`.
+
+If both fill, the YES and NO shares cancel into 1 SUSQie per pair, so the round
+trip earns the gap whichever way the race goes. Quotes are cancelled and
+replaced every cycle.
+
+Pricing: never at or through fair value, at most one tick ahead of the current
+best, and never crossing the book, so quotes always rest instead of taking.
+
+Inventory control:
+- quotes shift away from held inventory (`MAKER_SKEW`), so the reducing side
+  gets more attractive;
+- at `MAKER_MAX_INVENTORY` net cost, the side that would add stops quoting;
+- new inventory also respects `MAKER_BUDGET`, the cash reserve, the per-race
+  cap and the D-vs-R cap.
+
+The two strategies never mix. The maker records the exchanges it manages in
+`state/maker.json` and stays out of races where buy-and-hold holds a position.
+Buy-and-hold stays out of the maker's exchanges. `./bot status` tags maker
+positions `MM`. Maker inventory counts against `MAKER_BUDGET`, not
+`MAX_TOTAL_EXPOSURE`.
+
+The maker stops quoting `MAKER_STOP_HOURS_BEFORE_END` hours (default 36) before
+the tournament ends. On election night prices jump faster than a 60-second
+cycle can requote. Inventory left over is held to settlement. Turning the
+maker off hands that inventory back to buy-and-hold.
+
 ## Development
 
 ```bash

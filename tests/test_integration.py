@@ -392,3 +392,28 @@ def test_dry_run_shutdown_places_no_cancel() -> None:
     engine = TradingEngine(s, client, Views({}))
     engine._on_shutdown()
     assert not [p for m, p, _ in api.calls if p == "/orders/cancel-all"]
+
+
+def test_prescreen_skips_open_edges_when_buy_and_hold_is_full() -> None:
+    from supermarket_bot.models import BulkExchangePrice, Market
+
+    class StubClient:
+        def bulk_prices(self, ids):  # type: ignore[no-untyped-def]
+            return {
+                # Open edge: fair 0.60 vs ask 0.45.
+                "10": BulkExchangePrice(exchangeId="10", bestBid=0.40, bestAsk=0.45),
+                # Take profit: holding YES and the bid 0.70 is above fair 0.65.
+                "20": BulkExchangePrice(exchangeId="20", bestBid=0.70, bestAsk=0.72),
+            }, set()
+
+    s = Settings(api_key="k", _env_file=None, min_edge=0.03)  # type: ignore[call-arg]
+    views = Views({"10": FairValue(0.60, 1.0), "20": FairValue(0.65, 1.0)})
+    engine = TradingEngine(s, StubClient(), views)  # type: ignore[arg-type]
+    markets = [
+        Market(id="M1", title="a", status="open", exchanges=[{"id": "10"}]),
+        Market(id="M2", title="b", status="open", exchanges=[{"id": "20"}]),
+    ]
+    holdings = {"20": 50}
+
+    assert engine._markets_to_fetch(markets, holdings, allow_open=True) == ["M1", "M2"]
+    assert engine._markets_to_fetch(markets, holdings, allow_open=False) == ["M2"]
