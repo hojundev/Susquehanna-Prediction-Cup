@@ -357,9 +357,10 @@ class SuperMarketClient:
     def cancel_order(self, order_id: int) -> None:
         self._request("DELETE", f"/orders/{order_id}")
 
-    def cancel_all(self) -> int:
-        """Cancel every open order of ours in this tournament."""
-        payload = self._request(
-            "POST", "/orders/cancel-all", json={"tournamentId": self.tournament_id}
-        )
+    def cancel_all(self, exchange_id: str | None = None) -> int:
+        """Cancel every open order of ours in this tournament (or one exchange)."""
+        body: dict[str, Any] = {"tournamentId": self.tournament_id}
+        if exchange_id is not None:
+            body["exchangeId"] = exchange_id
+        payload = self._request("POST", "/orders/cancel-all", json=body)
         return int((payload or {}).get("cancelled", 0))

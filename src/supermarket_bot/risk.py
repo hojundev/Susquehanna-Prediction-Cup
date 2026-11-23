@@ -78,7 +78,10 @@ class ExposureState:
     per_market_cost: dict[str, float] = field(default_factory=dict)
     #: Signed cost per exchange: +YES cost, -NO cost.
     per_exchange_cost: dict[str, float] = field(default_factory=dict)
+    #: Buy-and-hold cost only; checked against ``max_total_exposure``.
     total_cost: float = 0.0
+    #: Maker inventory plus resting maker quotes; checked against ``maker_budget``.
+    maker_cost: float = 0.0
     #: Net exposure to a Democratic-favourable environment (negative = R).
     net_d: float = 0.0
     spent: float = 0.0
@@ -90,29 +93,58 @@ class ExposureState:
         positions: list[Position],
         lean_of: LeanLookup,
         group_of: GroupLookup = _same,
+        maker_exchanges: set[str] | frozenset[str] = frozenset(),
     ) -> ExposureState:
+        """Build from open positions.
+
+        Positions in ``maker_exchanges`` count toward ``maker_cost`` rather
+        than ``total_cost``. They still count toward the per-race and D-vs-R
+        caps, because the risk is the same whichever strategy holds them.
+        """
         live = [p for p in positions if not p.settled and p.side is not None]
         equity = cash + sum(max(p.market_value, 0.0) for p in live)
         state = cls(cash=cash, equity=equity)
         for p in live:
             assert p.side is not None
-            state._record(group_of(p.market_id), p.exchange_id, p.side, abs(p.cost_basis), lean_of)
+            maker = p.exchange_id in maker_exchanges
+            cost = abs(p.cost_basis)
+            state._record(
+                group_of(p.market_id), p.exchange_id, p.side, cost, lean_of, count_total=not maker
+            )
+            if maker:
+                state.maker_cost += cost
         return state
 
     def _record(
-        self, market_id: str, exchange_id: str, side: Side, cost: float, lean_of: LeanLookup
+        self,
+        market_id: str,
+        exchange_id: str,
+        side: Side,
+        cost: float,
+        lean_of: LeanLookup,
+        *,
+        count_total: bool = True,
     ) -> None:
         self.per_market_cost[market_id] = self.per_market_cost.get(market_id, 0.0) + cost
         self.per_exchange_cost[exchange_id] = (
             self.per_exchange_cost.get(exchange_id, 0.0) + side.sign * cost
         )
-        self.total_cost += cost
+        if count_total:
+            self.total_cost += cost
         self.net_d += side.sign * _lean_sign(lean_of(exchange_id)) * cost
 
     def reserve(
         self, market_id: str, exchange_id: str, side: Side, cost: float, lean_of: LeanLookup
     ) -> None:
         self._record(market_id, exchange_id, side, cost, lean_of)
+        self.spent += cost
+
+    def reserve_maker(
+        self, market_id: str, exchange_id: str, side: Side, cost: float, lean_of: LeanLookup
+    ) -> None:
+        """Reserve capital for a resting maker quote as if it had filled."""
+        self._record(market_id, exchange_id, side, cost, lean_of, count_total=False)
+        self.maker_cost += cost
         self.spent += cost
 
 
@@ -150,6 +182,18 @@ class RiskManager:
             return float("inf")
         limit = self._s.max_correlated_exposure * state.equity
         return limit - direction * state.net_d
+
+    # Public views used by the market maker, which has its own budget but
+    # shares the cash reserve and the per-race and D-vs-R caps.
+    def spendable(self, state: ExposureState) -> float:
+        return self._spendable(state)
+
+    def race_headroom(self, market_id: str, state: ExposureState) -> float:
+        cap = self._s.max_market_exposure * state.equity
+        return cap - state.per_market_cost.get(self._group(market_id), 0.0)
+
+    def correlation_headroom(self, exchange_id: str, side: Side, state: ExposureState) -> float:
+        return self._correlation_headroom(exchange_id, side, state)
 
     # -- sizing ----------------------------------------------------------
     def kelly_fraction(self, cand: TradeCandidate, scale: float = 1.0) -> float:
@@ -236,10 +280,18 @@ class RiskManager:
         f = self.kelly_fraction(cand, kelly_scale)
         if f <= 0:
             return None
+        # Near-certain markets get a larger per-race cap: the side being bought
+        # has a fair value >= the high-confidence threshold.
+        side_fair = cand.fair.probability if cand.fair else 0.0
+        if leg.side is Side.NO and cand.fair:
+            side_fair = 1.0 - cand.fair.probability
+        market_cap = self._s.max_market_exposure
+        if cand.fair and side_fair >= self._s.high_conf_threshold:
+            market_cap = max(market_cap, self._s.high_conf_market_cap)
         held_same_side = max(0.0, leg.side.sign * state.per_exchange_cost.get(leg.exchange_id, 0.0))
         budget = min(
             f * state.equity - held_same_side,
-            self._headroom(cand.market_id, state, self._s.max_market_exposure),
+            self._headroom(cand.market_id, state, market_cap),
             self._correlation_headroom(leg.exchange_id, leg.side, state),
         )
         qty = min(leg.available, _shares(budget, leg.price))

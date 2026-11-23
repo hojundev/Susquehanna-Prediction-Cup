@@ -1,16 +1,42 @@
 # Super Market Trading Bot
 
 An automated Python bot for **The Super Market** 2026 Midterm Elections tournament
-(SIG site). It targets a **safe top-N finish**: locked-profit arbitrage first,
-directional trades only where you have an independent view, and hard caps so no
-single settlement can sink your standing.
+(SIG site). It targeted a **safe top-N finish**: locked-profit arbitrage first,
+directional trades only where there was an independent view, and hard caps so no
+single settlement could sink the standing.
+
+## Final result
+
+The tournament has ended. Final standing:
+
+| Metric | Result |
+| --- | --- |
+| Starting balance | 100,000 SUSQies |
+| Final profit | **+11,669 SUSQies** (+11.7%) |
+| Ending balance | 111,669 SUSQies |
+| Rank | **470 of 1,969** (top ~24%) |
+
+<!-- Insert final leaderboard / results screenshot below -->
+![Final leaderboard result](docs/final-result.png)
+
+The profit came from two sources running in parallel for most of the tournament:
+market-making the gap while Super Market prices lagged Kalshi/Polymarket, and
+buy-and-hold directional positions anchored to those outside fair values. In the
+final ~10 hours, as the external anchors thinned and the races began resolving,
+the bot switched entirely to buy-and-hold and rode its positions to settlement
+without paying the spread on exits (see [Strategy evolution](#strategy-evolution)).
 
 ## Strategy
 
 Each cycle executes in this priority order:
 
-1. **Take profit (`close`).** If you hold a side with a fair-value view and the
-   market has reached that value, sell into the book. Closes bypass all caps.
+1. **Close (`close`).** Two reasons to exit a held side, both needing a
+   fair-value view. **Take profit** (`TAKE_PROFIT`, on by default): the market
+   has reached your fair value, so sell into the book. **Negative-edge cut**
+   (`CLOSE_NEGATIVE_EDGE`, off by default): the held side's edge at the current
+   sell price has fallen to/below `CLOSE_EDGE_THRESHOLD`, so holding no longer
+   has positive expected value — sell regardless of P&L (never on entry price,
+   to avoid a sunk-cost trap). Closes bypass all caps.
 2. **Arbitrage (multi-outcome markets).** At most one outcome can win, so buying
    NO on every outcome pays at least `n - 1`. When the best YES bids sum above 1,
    that basket locks in `sum(bids) - 1` per set. It is placed atomically via
@@ -39,11 +65,58 @@ Each cycle executes in this priority order:
 Risk caps are fractions of **equity** (cash + position value): per market, total,
 a cash reserve, and a net D-vs-R cap across exchanges you tag with a `lean`.
 An open is skipped if fair value and the book differ by more than `MAX_EDGE`
-(0.25). A gap that large usually means a bad mapping.
+(0.25). A gap that large usually means a bad mapping. A **high-confidence lane**
+raises the per-race cap to `HIGH_CONF_MARKET_CAP` for a side whose own fair value
+is at least `HIGH_CONF_THRESHOLD` (default 0.95), so near-certain outcomes can
+take a larger position than the ordinary per-market cap allows.
 
 Fair values come from **Kalshi and Polymarket** prices for exchanges you approve
 (see below), optionally overridden by your own `fair_values.json`. With neither,
 the bot runs **arbitrage-only**.
+
+## Strategy evolution
+
+The live strategy changed across the tournament as the field, the mappings, and
+the clock moved. In rough order:
+
+1. **Arbitrage + mispricing core.** The first working bot did locked-profit
+   arbitrage (multi-outcome NO baskets, then cross-market relationship baskets)
+   plus fractional-Kelly directional opens wherever an independent fair value
+   beat the Super Market price by `MIN_EDGE`. An early rewrite corrected a wrong
+   assumption that binary markets contain internal arbitrage (they do not: YES
+   ask + NO ask = 1 + spread), and fixed pagination, tick snapping, NO-side
+   quantity signs, and order pile-up.
+
+2. **Outside price anchors.** Added read-only Kalshi and Polymarket feeds and a
+   `mappings.json` matcher (`suggest` / `approve` / `check`) so fair values came
+   from real external markets rather than guesses. The matcher was hardened over
+   several passes (year preference, margin-bracket penalties, office/state gates,
+   district exact-match) until ~221 of 237 markets were mapped and approved.
+
+3. **Market maker.** On a dedicated `market-maker` branch, added a two-sided
+   quoting strategy with its own budget, inventory skew/caps, and a separate
+   accounting bucket (`MAKER_BUDGET`, not `MAX_TOTAL_EXPOSURE`). It was ramped in
+   stages (10% → 30% → 45% budget, 5 → 20 markets) and the half-spread tightened
+   from 0.02 to 0.015 for more fills as Super Market prices converged toward
+   Kalshi. This ran alongside buy-and-hold, which took the directional side.
+
+4. **Endgame features (coded, held in reserve).** Near settlement, two optional
+   features were added: a **high-confidence lane** (a larger per-race cap for
+   sides whose fair value is ≥ `HIGH_CONF_THRESHOLD`) and **negative-edge
+   position closing** (`CLOSE_NEGATIVE_EDGE`, sell any held position whose edge
+   has fallen to/below `CLOSE_EDGE_THRESHOLD`). A dry run showed a 0.0 close
+   threshold the day before settlement would liquidate ~34 positions — including
+   strong-thesis holds — by buying them back across the spread on markets that
+   resolve 0/1 anyway. So the close feature was left **off**: the losses it
+   flagged were mostly Super Market mids converging to Kalshi, not broken theses.
+
+5. **Hold to settlement.** In the final ~10 hours, as Kalshi/Polymarket races
+   began resolving and usable external anchors dropped sharply (221 → ~46), the
+   bot was switched **entirely to buy-and-hold**: the maker disabled
+   (`MAKER_ENABLED=false`, handing its inventory to buy-and-hold) and take-profit
+   turned off (`TAKE_PROFIT=false`), so every position simply rides to
+   resolution with no spread paid on exits. Quoting without reliable anchors on
+   election night is the main pick-off risk, and this posture removes it.
 
 ## Order hygiene
 
@@ -143,6 +216,39 @@ Re-running `suggest` adds new markets and never changes approved entries.
 true, plus optional `confidence` and `lean`. See `fair_values.example.json`. It
 overrides outside prices for any exchange it lists. The file is re-read every cycle.
 If it becomes unreadable, the last good values are kept.
+
+## Market making (optional, off by default)
+
+With `SUPERMARKET_MAKER_ENABLED=true`, each cycle the bot also rests two limit
+orders on up to `MAKER_MAX_MARKETS` exchanges that have a fair value:
+
+- a YES bid at about `fair - MAKER_HALF_SPREAD`;
+- a YES ask at about `fair + MAKER_HALF_SPREAD`, sent as a NO buy at `1 - ask`.
+
+If both fill, the YES and NO shares cancel into 1 SUSQie per pair, so the round
+trip earns the gap whichever way the race goes. Quotes are cancelled and
+replaced every cycle.
+
+Pricing: never at or through fair value, at most one tick ahead of the current
+best, and never crossing the book, so quotes always rest instead of taking.
+
+Inventory control:
+- quotes shift away from held inventory (`MAKER_SKEW`), so the reducing side
+  gets more attractive;
+- at `MAKER_MAX_INVENTORY` net cost, the side that would add stops quoting;
+- new inventory also respects `MAKER_BUDGET`, the cash reserve, the per-race
+  cap and the D-vs-R cap.
+
+The two strategies never mix. The maker records the exchanges it manages in
+`state/maker.json` and stays out of races where buy-and-hold holds a position.
+Buy-and-hold stays out of the maker's exchanges. `./bot status` tags maker
+positions `MM`. Maker inventory counts against `MAKER_BUDGET`, not
+`MAX_TOTAL_EXPOSURE`.
+
+The maker stops quoting `MAKER_STOP_HOURS_BEFORE_END` hours (default 36) before
+the tournament ends. On election night prices jump faster than a 60-second
+cycle can requote. Inventory left over is held to settlement. Turning the
+maker off hands that inventory back to buy-and-hold.
 
 ## Development
 

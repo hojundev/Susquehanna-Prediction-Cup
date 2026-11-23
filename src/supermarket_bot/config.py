@@ -76,6 +76,31 @@ class Settings(BaseSettings):
         default=True,
         description="Close a position once the market reaches your fair value.",
     )
+    close_negative_edge: bool = Field(
+        default=False,
+        description=(
+            "Sell a held position when its edge (fair - price on the held side) falls to or "
+            "below close_edge_threshold. Cuts dead/negative-EV capital regardless of P&L."
+        ),
+    )
+    close_edge_threshold: float = Field(
+        default=0.0,
+        ge=-1.0,
+        le=1.0,
+        description="Edge floor for close_negative_edge. 0.0 = sell anything at or below fair.",
+    )
+    high_conf_threshold: float = Field(
+        default=0.95,
+        ge=0.5,
+        le=1.0,
+        description="A side counts as high-confidence when its fair value is at least this.",
+    )
+    high_conf_market_cap: float = Field(
+        default=0.15,
+        gt=0.0,
+        le=1.0,
+        description="Per-race cap for high-confidence sides (vs max_market_exposure).",
+    )
     kelly_fraction: float = Field(
         default=0.25,
         ge=0.0,
@@ -143,6 +168,72 @@ class Settings(BaseSettings):
         ge=0.0,
         le=1.0,
         description="Fraction of equity always kept as uncommitted cash.",
+    )
+
+    # --- Market making (off by default) ---
+    maker_enabled: bool = Field(
+        default=False,
+        description="Rest a bid below and an ask above fair value on selected exchanges.",
+    )
+    maker_budget: float = Field(
+        default=0.60,
+        ge=0.0,
+        le=1.0,
+        description=(
+            "Fraction of equity for maker inventory plus resting maker quotes. Separate from "
+            "MAX_TOTAL_EXPOSURE (buy-and-hold); both share the cash reserve and race/D-R caps."
+        ),
+    )
+    maker_half_spread: float = Field(
+        default=0.02,
+        gt=0.0,
+        le=0.25,
+        description="Each quote sits at least this far from fair value.",
+    )
+    maker_quote_size: float = Field(
+        default=200.0,
+        gt=0.0,
+        description="SUSQies of cost per side per quote.",
+    )
+    maker_max_inventory: float = Field(
+        default=1000.0,
+        gt=0.0,
+        description="Max net position cost per exchange; the side that adds to it stops quoting.",
+    )
+    maker_skew: float = Field(
+        default=0.01,
+        ge=0.0,
+        le=0.25,
+        description="Max price shift away from held inventory (at full inventory).",
+    )
+    maker_max_markets: int = Field(
+        default=20,
+        ge=1,
+        le=100,
+        description="Max exchanges quoted per cycle (two orders each).",
+    )
+    maker_min_confidence: float = Field(
+        default=0.4,
+        ge=0.0,
+        le=1.0,
+        description="Skip exchanges whose fair-value confidence is below this.",
+    )
+    maker_min_fair: float = Field(default=0.05, ge=0.0, le=1.0)
+    maker_max_fair: float = Field(default=0.95, ge=0.0, le=1.0)
+    maker_min_shares: int = Field(
+        default=10, ge=1, description="Skip a quote side smaller than this many shares."
+    )
+    maker_stop_hours_before_end: float = Field(
+        default=36.0,
+        ge=0.0,
+        description=(
+            "Stop quoting this many hours before the tournament ends. Results arrive on "
+            "election night, when resting quotes get picked off before the bot can react."
+        ),
+    )
+    maker_state_path: str = Field(
+        default="state/maker.json",
+        description="Where the bot records which exchanges the maker manages.",
     )
 
     # --- Leaderboard pacing ---
