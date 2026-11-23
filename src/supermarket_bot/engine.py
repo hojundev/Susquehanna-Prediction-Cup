@@ -166,10 +166,16 @@ class TradingEngine:
         self._bulk = quotes  # the market maker reuses these best bid/ask
 
         linked = {mid for r in self._relationships for mid in r.market_of.values() if mid}
+        # When closing negative-edge positions, any market we hold must be
+        # fetched so evaluate() can check it for a cut, even at the b&h cap.
+        close_scan = self._s.close_negative_edge
         keep: list[str] = []
         for m in markets:
             ids = [ex.id for ex in m.exchanges]
             if m.id in linked or any(e in missing or e not in quotes for e in ids):
+                keep.append(m.id)
+                continue
+            if close_scan and any(holdings.get(e, 0) for e in ids):
                 keep.append(m.id)
                 continue
             qs = [quotes[e] for e in ids]

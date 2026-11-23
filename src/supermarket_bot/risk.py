@@ -280,10 +280,18 @@ class RiskManager:
         f = self.kelly_fraction(cand, kelly_scale)
         if f <= 0:
             return None
+        # Near-certain markets get a larger per-race cap: the side being bought
+        # has a fair value >= the high-confidence threshold.
+        side_fair = cand.fair.probability if cand.fair else 0.0
+        if leg.side is Side.NO and cand.fair:
+            side_fair = 1.0 - cand.fair.probability
+        market_cap = self._s.max_market_exposure
+        if cand.fair and side_fair >= self._s.high_conf_threshold:
+            market_cap = max(market_cap, self._s.high_conf_market_cap)
         held_same_side = max(0.0, leg.side.sign * state.per_exchange_cost.get(leg.exchange_id, 0.0))
         budget = min(
             f * state.equity - held_same_side,
-            self._headroom(cand.market_id, state, self._s.max_market_exposure),
+            self._headroom(cand.market_id, state, market_cap),
             self._correlation_headroom(leg.exchange_id, leg.side, state),
         )
         qty = min(leg.available, _shares(budget, leg.price))

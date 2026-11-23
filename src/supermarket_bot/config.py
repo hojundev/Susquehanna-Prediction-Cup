@@ -76,6 +76,31 @@ class Settings(BaseSettings):
         default=True,
         description="Close a position once the market reaches your fair value.",
     )
+    close_negative_edge: bool = Field(
+        default=False,
+        description=(
+            "Sell a held position when its edge (fair - price on the held side) falls to or "
+            "below close_edge_threshold. Cuts dead/negative-EV capital regardless of P&L."
+        ),
+    )
+    close_edge_threshold: float = Field(
+        default=0.0,
+        ge=-1.0,
+        le=1.0,
+        description="Edge floor for close_negative_edge. 0.0 = sell anything at or below fair.",
+    )
+    high_conf_threshold: float = Field(
+        default=0.95,
+        ge=0.5,
+        le=1.0,
+        description="A side counts as high-confidence when its fair value is at least this.",
+    )
+    high_conf_market_cap: float = Field(
+        default=0.15,
+        gt=0.0,
+        le=1.0,
+        description="Per-race cap for high-confidence sides (vs max_market_exposure).",
+    )
     kelly_fraction: float = Field(
         default=0.25,
         ge=0.0,

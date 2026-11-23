@@ -135,26 +135,65 @@ class SignalEngine:
         # Only one basket per market: they compete for the same capital.
         return sorted(out, key=lambda c: -c.edge)[:1]
 
-    # -- take profit -----------------------------------------------------
+    # -- take profit / cut negative-edge ---------------------------------
     def _close_for(
         self, market_id: str, ex: OrderbookExchange, fv: FairValue, held_signed: int
     ) -> TradeCandidate | None:
-        if not self._s.take_profit or held_signed == 0:
+        if held_signed == 0:
+            return None
+        q = fv.probability
+        held_side = Side.YES if held_signed > 0 else Side.NO
+        # Edge on the held side at the price we could sell into right now.
+        # YES sells into the best bid; NO sells at 1 - best ask.
+        if held_side is Side.YES:
+            best = ex.best_bid()
+            sell_price = best.price if best else None
+            held_edge = None if sell_price is None else q - sell_price
+        else:
+            best = ex.best_ask()
+            sell_price = (1.0 - best.price) if best else None  # NO sell price
+            held_edge = None if best is None else (1.0 - best.price) - (1.0 - q)
+
+        # Cut a position whose edge has fallen to/below the floor: holding it
+        # no longer has positive expected value, so sell regardless of P&L.
+        if (
+            self._s.close_negative_edge
+            and held_edge is not None
+            and held_edge <= self._s.close_edge_threshold
+        ):
+            if held_side is Side.YES:
+                worst, qty = _walk(ex.bids, lambda _p: True)
+                leg = Leg(ex.exchange_id, Side.YES, Action.SELL, worst or 0.0, qty)
+            else:
+                worst, qty = _walk(ex.asks, lambda _p: True)
+                leg = Leg(ex.exchange_id, Side.NO, Action.SELL, 1.0 - (worst or 1.0), qty)
+            if qty > 0:
+                return TradeCandidate(
+                    kind="close",
+                    market_id=market_id,
+                    legs=[leg],
+                    edge=0.0,
+                    reason=f"cut: edge {held_edge:+.3f} <= {self._s.close_edge_threshold:+.3f}",
+                    fair=fv,
+                    held=abs(held_signed),
+                )
+
+        if not self._s.take_profit:
             return None
         if held_signed > 0:
             # Hold YES: sell YES into bids at or above fair value.
-            worst, qty = _walk(ex.bids, lambda p: p >= fv.probability)
+            worst, qty = _walk(ex.bids, lambda p: p >= q)
             if worst is None:
                 return None
             leg = Leg(ex.exchange_id, Side.YES, Action.SELL, worst, qty)
-            why = f"bid>={worst:.3f} reached fair={fv.probability:.3f}"
+            why = f"bid>={worst:.3f} reached fair={q:.3f}"
         else:
             # Hold NO: selling NO at 1-a == lifting YES asks at or below fair.
-            worst, qty = _walk(ex.asks, lambda p: p <= fv.probability)
+            worst, qty = _walk(ex.asks, lambda p: p <= q)
             if worst is None:
                 return None
             leg = Leg(ex.exchange_id, Side.NO, Action.SELL, 1.0 - worst, qty)
-            why = f"ask<={worst:.3f} reached fair={fv.probability:.3f}"
+            why = f"ask<={worst:.3f} reached fair={q:.3f}"
         return TradeCandidate(
             kind="close",
             market_id=market_id,

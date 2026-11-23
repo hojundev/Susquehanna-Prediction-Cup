@@ -365,7 +365,8 @@
   },
   "1015": {
     "title": "Will the Democratic Party win the FL-20 House race?",
-    "approved": false,
+    "approved": true,
+    "lean": "D",
     "kalshi": {
       "ref": "KXHOUSERACE-FL20-26-D",
       "invert": false
@@ -376,17 +377,17 @@
     },
     "suggestions": {
       "kalshi": [
-        "0.64  KXHOUSERACE-FL20-26-D  FL-20 House winner? — Debbie Wasserman Schultz  [0.965/0.975]",
-        "0.54  KXHOUSERACE-FL20-26-R  FL-20 House winner? — Brent Andersen  [0.012/0.020]",
-        "0.28  KXVOTEGENERAL-KXHOUSERACE-FL20-26BAND-20  FL-20 House election: Brent Andersen vote percent — At least 20%  [0.840/0.940]"
+        "0.64  KXHOUSERACE-FL20-26-D  FL-20 House winner? — Debbie Wasserman Schultz  [0.966/0.976]",
+        "0.54  KXHOUSERACE-FL20-26-R  FL-20 House winner? — Brent Andersen  [0.012/0.033]",
+        "0.28  KXVOTEGENERAL-KXHOUSERACE-FL20-26BAND-20  FL-20 House election: Brent Andersen vote percent — At least 20%  [0.850/0.940]"
       ],
       "polymarket": [
-        "0.53  1283097  Will the Democratic Party win the FL-20 House seat?  [0.950/0.960]",
-        "0.45  1283096  Will the Republican Party win the FL-20 House seat?  [0.008/0.034]",
-        "0.13  3408478  Will the Democratic Party candidate win the 2026 FL-20 House election by 20%-30%?  [0.023/0.050]"
+        "0.53  1283097  Will the Democratic Party win the FL-20 House seat?  [0.971/0.994]",
+        "0.45  1283096  Will the Republican Party win the FL-20 House seat?  [0.004/0.017]",
+        "0.13  3408478  Will the Democratic Party candidate win the 2026 FL-20 House election by 20%-30%?  [0.020/0.027]"
       ]
     },
-    "superMarketLast": 0.955
+    "superMarketLast": 0.945
   },
   "1016": {
     "title": "Will the Republican Party win the FL-20 House race?",
@@ -895,7 +896,7 @@
   },
   "1036": {
     "title": "Will the Democratic Party win the WA-03 House race?",
-    "approved": false,
+    "approved": true,
     "lean": "D",
     "kalshi": {
       "ref": "HOUSEWA3-26-D",
@@ -907,16 +908,16 @@
     },
     "suggestions": {
       "kalshi": [
-        "0.59  HOUSEWA3-26-D  WA-03 House winner? — Marie Gluesenkamp Perez  [0.900/0.903]",
-        "0.49  HOUSEWA3-26-R  WA-03 House winner? — John Braun  [0.100/0.110]",
-        "0.24  KXVOTEGENERAL-HOUSEWA3-26JBRA-38  WA-03 House election: John Braun vote percent — At least 38%  [0.930/0.990]"
+        "0.59  HOUSEWA3-26-D  WA-03 House winner? — Marie Gluesenkamp Perez  [0.890/0.904]",
+        "0.49  HOUSEWA3-26-R  WA-03 House winner? — John Braun  [0.092/0.099]",
+        "0.24  KXVOTEGENERAL-HOUSEWA3-26JBRA-38  WA-03 House election: John Braun vote percent — At least 38%  [0.950/0.990]"
       ],
       "polymarket": [
-        "0.54  944314  Will the Democratic Party win the WA-03 House seat?  [0.900/0.910]",
-        "0.44  944313  Will the Republican Party win the WA-03 House seat?  [0.080/0.090]"
+        "0.54  944314  Will the Democratic Party win the WA-03 House seat?  [0.880/0.890]",
+        "0.44  944313  Will the Republican Party win the WA-03 House seat?  [0.100/0.110]"
       ]
     },
-    "superMarketLast": 0.865
+    "superMarketLast": 0.855
   },
   "1037": {
     "title": "Will the Republican Party win the WA-03 House race?",
@@ -1020,7 +1021,7 @@
   },
   "1041": {
     "title": "Will the Republican Party win the WI-03 House race?",
-    "approved": false,
+    "approved": true,
     "lean": "R",
     "kalshi": {
       "ref": "HOUSEWI3-26-R",
@@ -1032,16 +1033,16 @@
     },
     "suggestions": {
       "kalshi": [
-        "0.61  HOUSEWI3-26-R  WI-03 House winner? — Derrick Van Orden  [0.270/0.280]",
-        "0.51  HOUSEWI3-26-D  WI-03 House winner? — Rebecca Cooke  [0.720/0.740]",
+        "0.61  HOUSEWI3-26-R  WI-03 House winner? — Derrick Van Orden  [0.250/0.260]",
+        "0.51  HOUSEWI3-26-D  WI-03 House winner? — Rebecca Cooke  [0.740/0.750]",
         "0.26  KXVOTEGENERAL-HOUSEWI3-26RCOO-44  WI-03 House election: Rebecca Cooke vote percent — At least 44%  [0.950/0.990]"
       ],
       "polymarket": [
         "0.56  944341  Will the Republican Party win the WI-03 House seat?  [0.250/0.260]",
-        "0.46  944342  Will the Democratic Party win the WI-03 House seat?  [0.720/0.730]"
+        "0.46  944342  Will the Democratic Party win the WI-03 House seat?  [0.730/0.740]"
       ]
     },
-    "superMarketLast": 0.275
+    "superMarketLast": 0.285
   },
   "1042": {
     "title": "Will the Democratic Party win the Delaware Senate?",
@@ -1068,7 +1069,8 @@
   },
   "1043": {
     "title": "Will the Democratic Party win the Florida Senate?",
-    "approved": false,
+    "approved": true,
+    "lean": "D",
     "kalshi": {
       "ref": "SENATEFLS-26-D",
       "invert": false
@@ -1076,17 +1078,17 @@
     "polymarket": null,
     "suggestions": {
       "kalshi": [
-        "0.54  SENATEFLS-26-D  Florida Senate winner? — Angie Nixon  [0.096/0.098]",
-        "0.51  GOVPARTYFL-26-D  Florida Governor winner? — David Jolly  [0.230/0.240]",
-        "0.48  SENATEFLS-26-R  Florida Senate winner? — Ashley Moody  [0.902/0.904]"
+        "0.54  SENATEFLS-26-D  Florida Senate winner? — Angie Nixon  [0.090/0.093]",
+        "0.48  SENATEFLS-26-R  Florida Senate winner? — Ashley Moody  [0.908/0.912]",
+        "0.41  KXSTATELEG-FLSENA26-D  Florida State Senate winner? — Democratic party  [0.020/0.030]"
       ],
       "polymarket": [
         "0.27  562793  Will the Democratic Party control the Senate after the 2026 Midterm elections?  [0.620/0.630]",
-        "0.18  562802  Will the Democratic Party control the House after the 2026 Midterm elections?  [0.920/0.930]",
-        "0.17  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]"
+        "0.17  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]",
+        "0.11  3343185  Will the Democratic Party candidate win the 2026 Florida Senate election by 0%-3%?  [0.074/0.111]"
       ]
     },
-    "superMarketLast": 0.13
+    "superMarketLast": 0.205
   },
   "1044": {
     "title": "Will the Republican Party win the Florida Senate?",
@@ -1113,7 +1115,8 @@
   },
   "1045": {
     "title": "Will the Democratic Party win the Kansas Senate?",
-    "approved": false,
+    "approved": true,
+    "lean": "D",
     "kalshi": {
       "ref": "SENATEKS-26-D",
       "invert": false
@@ -1121,17 +1124,17 @@
     "polymarket": null,
     "suggestions": {
       "kalshi": [
-        "0.53  SENATEKS-26-D  Kansas Senate winner? — Adam Hamilton  [0.290/0.300]",
-        "0.50  KXATTYGENKS-26-D  Kansas Attorney General winner? — Chris Mann  [0.390/0.400]",
-        "0.47  GOVPARTYKS-27-D  Kansas Governor winner? — Cindy Holscher  [0.280/0.290]"
+        "0.53  SENATEKS-26-D  Kansas Senate winner? — Adam Hamilton  [0.370/0.380]",
+        "0.45  SENATEKS-26-R  Kansas Senate winner? — Roger Marshall  [0.620/0.640]",
+        "0.33  CONTROLS-2026-D  Which party will win the U.S. Senate? — Democratic Party  [0.600/0.610]"
       ],
       "polymarket": [
         "0.27  562793  Will the Democratic Party control the Senate after the 2026 Midterm elections?  [0.620/0.630]",
-        "0.18  562802  Will the Democratic Party control the House after the 2026 Midterm elections?  [0.920/0.930]",
-        "0.18  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]"
+        "0.18  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]",
+        "0.12  3343547  Will the Democratic Party candidate win the 2026 Kansas Senate election?  [0.350/0.380]"
       ]
     },
-    "superMarketLast": 0.3
+    "superMarketLast": 0.42
   },
   "1046": {
     "title": "Will the Republican Party win the Kansas Senate?",
@@ -1160,24 +1163,21 @@
     "title": "Will the Democratic Party win the Michigan Senate?",
     "approved": false,
     "lean": "D",
-    "kalshi": {
-      "ref": "KXATTYGENMI-26-D",
-      "invert": false
-    },
+    "kalshi": null,
     "polymarket": null,
     "suggestions": {
       "kalshi": [
-        "0.52  KXATTYGENMI-26-D  Michigan Attorney General winner? — Eli Savit  [0.730/0.740]",
-        "0.49  SENATEMI-26-D  Michigan Senate winner? — Abdul El-Sayed  [0.720/0.730]",
-        "0.48  GOVPARTYMI-26-D  Michigan Governor winner? — Jocelyn Benson  [0.918/0.925]"
+        "0.49  SENATEMI-26-D  Michigan Senate winner? — Abdul El-Sayed  [0.660/0.670]",
+        "0.47  SENATEMI-26-R  Michigan Senate winner? — Mike Rogers  [0.330/0.350]",
+        "0.45  KXMISENATE-26-MMCM  Michigan Senate winner? (Person) — Mallory McMorrow  [no quote]"
       ],
       "polymarket": [
         "0.27  562793  Will the Democratic Party control the Senate after the 2026 Midterm elections?  [0.620/0.630]",
-        "0.18  562802  Will the Democratic Party control the House after the 2026 Midterm elections?  [0.920/0.930]",
-        "0.18  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]"
+        "0.18  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]",
+        "0.10  3343887  Will the Democratic Party candidate win the 2026 Michigan Senate election by 0%-3%?  [0.100/0.190]"
       ]
     },
-    "superMarketLast": 0.71
+    "superMarketLast": 0.64
   },
   "1048": {
     "title": "Will the Republican Party win the Michigan Senate?",
@@ -1204,7 +1204,8 @@
   },
   "1049": {
     "title": "Will the Democratic Party win the Minnesota Senate?",
-    "approved": false,
+    "approved": true,
+    "lean": "D",
     "kalshi": {
       "ref": "SENATEMN-26-D",
       "invert": false
@@ -1212,17 +1213,17 @@
     "polymarket": null,
     "suggestions": {
       "kalshi": [
-        "0.63  SENATEMN-26-D  Minnesota Senate winner? — Peggy Flanagan  [0.890/0.900]",
-        "0.48  KXATTYGENMN-26-D  Minnesota Attorney General winner? — Keith Ellison  [0.780/0.810]",
-        "0.48  GOVPARTYMN-26-D  Minnesota Governor winner? — Amy Klobuchar  [0.951/0.957]"
+        "0.63  SENATEMN-26-D  Minnesota Senate winner? — Peggy Flanagan  [0.860/0.870]",
+        "0.48  SENATEMN-26-R  Minnesota Senate winner? — Michele Tafoya  [0.130/0.140]",
+        "0.42  KXSTATELEG-MNSEN26-D  Minnesota State Senate winner? — Democratic party  [0.840/0.850]"
       ],
       "polymarket": [
-        "0.31  4443242  Will the Democratic Party control the Minnesota Senate after the 2026 Midterm elections?  [0.820/0.860]",
+        "0.31  4443242  Will the Democratic Party control the Minnesota Senate after the 2026 Midterm elections?  [0.800/0.830]",
         "0.27  562793  Will the Democratic Party control the Senate after the 2026 Midterm elections?  [0.620/0.630]",
-        "0.22  4443243  Will the Republican Party control the Minnesota Senate after the 2026 Midterm elections?  [0.120/0.140]"
+        "0.22  4443243  Will the Republican Party control the Minnesota Senate after the 2026 Midterm elections?  [0.160/0.170]"
       ]
     },
-    "superMarketLast": 0.865
+    "superMarketLast": 0.855
   },
   "1050": {
     "title": "Will the Republican Party win the Minnesota Senate?",
@@ -1249,7 +1250,8 @@
   },
   "1051": {
     "title": "Will the Democratic Party win the Tennessee Senate?",
-    "approved": false,
+    "approved": true,
+    "lean": "D",
     "kalshi": {
       "ref": "SENATETN-26-D",
       "invert": false
@@ -1257,17 +1259,17 @@
     "polymarket": null,
     "suggestions": {
       "kalshi": [
-        "0.52  SENATETN-26-D  Tennessee Senate winner? — Marquita Bradshaw  [0.023/0.025]",
-        "0.52  GOVPARTYTN-26-D  Tennessee Governor winner? — Jerri Green  [0.051/0.055]",
-        "0.50  SENATETN-26-R  Tennessee Senate winner? — Bill Hagerty  [0.976/0.980]"
+        "0.52  SENATETN-26-D  Tennessee Senate winner? — Marquita Bradshaw  [0.089/0.100]",
+        "0.50  SENATETN-26-R  Tennessee Senate winner? — Bill Hagerty  [0.900/0.915]",
+        "0.32  CONTROLS-2026-D  Which party will win the U.S. Senate? — Democratic Party  [0.600/0.610]"
       ],
       "polymarket": [
         "0.27  562793  Will the Democratic Party control the Senate after the 2026 Midterm elections?  [0.620/0.630]",
-        "0.18  562802  Will the Democratic Party control the House after the 2026 Midterm elections?  [0.920/0.930]",
-        "0.17  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]"
+        "0.17  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]",
+        "0.14  3344157  Will the Democratic Party candidate win the 2026 Tennessee Senate election?  [0.031/0.047]"
       ]
     },
-    "superMarketLast": 0.045
+    "superMarketLast": 0.095
   },
   "1052": {
     "title": "Will the Republican Party win the Tennessee Senate?",
@@ -1317,7 +1319,8 @@
   },
   "1054": {
     "title": "Will the Democratic Party win the Wyoming Senate?",
-    "approved": false,
+    "approved": true,
+    "lean": "D",
     "kalshi": {
       "ref": "SENATEWY-26-D",
       "invert": false
@@ -1325,17 +1328,17 @@
     "polymarket": null,
     "suggestions": {
       "kalshi": [
-        "0.54  SENATEWY-26-D  Wyoming Senate winner? — James Byrd  [0.024/0.027]",
-        "0.51  GOVPARTYWY-26-D  Wyoming Governor winner? — Kenneth Casner  [0.030/0.038]",
-        "0.49  SENATEWY-26-R  Wyoming Senate winner? — Harriet Hageman  [0.974/0.975]"
+        "0.54  SENATEWY-26-D  Wyoming Senate winner? — James Byrd  [0.023/0.026]",
+        "0.49  SENATEWY-26-R  Wyoming Senate winner? — Harriet Hageman  [0.975/0.979]",
+        "0.32  CONTROLS-2026-D  Which party will win the U.S. Senate? — Democratic Party  [0.600/0.610]"
       ],
       "polymarket": [
         "0.27  562793  Will the Democratic Party control the Senate after the 2026 Midterm elections?  [0.620/0.630]",
-        "0.18  562802  Will the Democratic Party control the House after the 2026 Midterm elections?  [0.920/0.930]",
-        "0.17  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]"
+        "0.17  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]",
+        "0.14  3344233  Will the Democratic Party candidate win the 2026 Wyoming Senate election?  [0.001/0.002]"
       ]
     },
-    "superMarketLast": 0.045
+    "superMarketLast": 0.05
   },
   "1055": {
     "title": "Will the Republican Party win the Wyoming Senate?",
@@ -1615,7 +1618,8 @@
   },
   "1068": {
     "title": "Will the Democratic Party win the Massachusetts Senate?",
-    "approved": false,
+    "approved": true,
+    "lean": "D",
     "kalshi": {
       "ref": "SENATEMA-26-D",
       "invert": false
@@ -1623,17 +1627,17 @@
     "polymarket": null,
     "suggestions": {
       "kalshi": [
-        "0.55  SENATEMA-26-D  Massachusetts Senate winner? — Ed Markey  [0.987/0.988]",
-        "0.52  SENATEMA-26-R  Massachusetts Senate winner? — John Deaton  [0.011/0.020]",
-        "0.51  GOVPARTYMA-26-D  Massachusetts Governor winner? — Maura Healey  [0.956/0.963]"
+        "0.55  SENATEMA-26-D  Massachusetts Senate winner? — Ed Markey  [0.979/0.983]",
+        "0.52  SENATEMA-26-R  Massachusetts Senate winner? — John Deaton  [0.013/0.022]",
+        "0.31  CONTROLS-2026-D  Which party will win the U.S. Senate? — Democratic Party  [0.600/0.610]"
       ],
       "polymarket": [
         "0.26  562793  Will the Democratic Party control the Senate after the 2026 Midterm elections?  [0.620/0.630]",
-        "0.18  562802  Will the Democratic Party control the House after the 2026 Midterm elections?  [0.920/0.930]",
-        "0.16  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]"
+        "0.16  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]",
+        "0.12  3343809  Will the Democratic Party candidate win the 2026 Massachusetts Senate election by 0%-10%?  [0.011/0.049]"
       ]
     },
-    "superMarketLast": 0.97
+    "superMarketLast": 0.94
   },
   "1069": {
     "title": "Will the Republican Party win the Massachusetts Senate?",
@@ -1660,7 +1664,7 @@
   },
   "1070": {
     "title": "Will the Democratic Party win the New Hampshire Senate?",
-    "approved": false,
+    "approved": true,
     "lean": "D",
     "kalshi": {
       "ref": "SENATENH-26-D",
@@ -1669,17 +1673,17 @@
     "polymarket": null,
     "suggestions": {
       "kalshi": [
-        "0.59  SENATENH-26-D  New Hampshire Senate winner? — Chris Pappas  [0.860/0.870]",
-        "0.56  GOVPARTYNH-28-D  New Hampshire Governor winner? — Cinde Warmington  [0.064/0.089]",
-        "0.50  SENATENH-26-R  New Hampshire Senate winner? — John E. Sununu  [0.120/0.140]"
+        "0.59  SENATENH-26-D  New Hampshire Senate winner? — Chris Pappas  [0.880/0.900]",
+        "0.50  SENATENH-26-R  New Hampshire Senate winner? — John E. Sununu  [0.100/0.110]",
+        "0.43  KXSTATELEG-NHSEN26-D  New Hampshire State Senate winner? — Democratic party  [0.310/0.320]"
       ],
       "polymarket": [
         "0.24  562793  Will the Democratic Party control the Senate after the 2026 Midterm elections?  [0.620/0.630]",
         "0.17  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]",
-        "0.16  562802  Will the Democratic Party control the House after the 2026 Midterm elections?  [0.920/0.930]"
+        "0.12  3343938  Will the Democratic Party candidate win the 2026 New Hampshire Senate election by 0%-3%?  [0.021/0.109]"
       ]
     },
-    "superMarketLast": 0.83
+    "superMarketLast": 0.875
   },
   "1071": {
     "title": "Will the Republican Party win the New Hampshire Senate?",
@@ -1711,17 +1715,17 @@
     "polymarket": null,
     "suggestions": {
       "kalshi": [
-        "0.49  SENATEOK-26-R  Oklahoma Senate winner? — Kevin Hern  [0.974/0.976]",
-        "0.49  SENATEOK-26-D  Oklahoma Senate winner? — N’Kiyla Thomas  [0.021/0.024]",
-        "0.48  KXATTYGENOK-26-D  Oklahoma Attorney General winner? — Nick Coffey  [0.045/0.046]"
+        "0.49  SENATEOK-26-R  Oklahoma Senate winner? — Kevin Hern  [0.969/0.971]",
+        "0.49  SENATEOK-26-D  Oklahoma Senate winner? — N’Kiyla Thomas  [0.027/0.031]",
+        "0.32  CONTROLS-2026-D  Which party will win the U.S. Senate? — Democratic Party  [0.600/0.610]"
       ],
       "polymarket": [
         "0.27  562793  Will the Democratic Party control the Senate after the 2026 Midterm elections?  [0.620/0.630]",
-        "0.19  562802  Will the Democratic Party control the House after the 2026 Midterm elections?  [0.920/0.930]",
-        "0.17  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]"
+        "0.17  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]",
+        "0.14  3344073  Will the Democratic Party candidate win the 2026 Oklahoma Senate election?  [0.004/0.028]"
       ]
     },
-    "superMarketLast": 0.07
+    "superMarketLast": 0.115
   },
   "1073": {
     "title": "Will the Democratic Party win the Rhode Island Governor?",
@@ -1794,7 +1798,8 @@
   },
   "1076": {
     "title": "Will the Democratic Party win the Rhode Island Senate?",
-    "approved": false,
+    "approved": true,
+    "lean": "D",
     "kalshi": {
       "ref": "SENATERI-26-D",
       "invert": false
@@ -1802,17 +1807,17 @@
     "polymarket": null,
     "suggestions": {
       "kalshi": [
-        "0.60  SENATERI-26-D  Rhode Island Senate winner? — Jack Reed  [0.987/0.993]",
-        "0.55  KXATTYGENRI-26-D  Rhode Island Attorney General winner? — Kim Ahern  [0.946/0.947]",
-        "0.54  GOVPARTYRI-26-D  Rhode Island Governor winner? — Helena Foulkes  [0.919/0.967]"
+        "0.60  SENATERI-26-D  Rhode Island Senate winner? — Jack Reed  [0.970/0.987]",
+        "0.53  SENATERI-26-R  Rhode Island Senate winner? — Raymond McKay  [0.011/0.023]",
+        "0.28  CONTROLS-2026-D  Which party will win the U.S. Senate? — Democratic Party  [0.600/0.610]"
       ],
       "polymarket": [
         "0.24  562793  Will the Democratic Party control the Senate after the 2026 Midterm elections?  [0.620/0.630]",
-        "0.17  562802  Will the Democratic Party control the House after the 2026 Midterm elections?  [0.920/0.930]",
-        "0.16  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]"
+        "0.16  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]",
+        "0.13  3344097  Will the Democratic Party candidate win the 2026 Rhode Island Senate election by 0%-5%?  [0.010/0.090]"
       ]
     },
-    "superMarketLast": 0.94
+    "superMarketLast": 0.86
   },
   "1077": {
     "title": "Will the Republican Party win the Rhode Island Senate?",
@@ -2006,25 +2011,26 @@
   },
   "847": {
     "title": "Will the Republican Party win the Arkansas Governor?",
-    "approved": false,
+    "approved": true,
+    "lean": "R",
     "kalshi": {
-      "ref": "KXLTGOVAR-26-R",
+      "ref": "GOVPARTYAR-26-R",
       "invert": false
     },
     "polymarket": null,
     "suggestions": {
       "kalshi": [
-        "0.64  KXLTGOVAR-26-R  Arkansas Lieutenant Governor winner? — Republican party  [0.930/0.980]",
-        "0.62  GOVPARTYAR-26-R  Arkansas Governor winner? — Sarah Huckabee Sanders  [0.935/0.982]",
-        "0.52  KXATTYGENAR-26-R  Arkansas Attorney General winner? — Tim Griffin  [0.978/0.985]"
+        "0.62  GOVPARTYAR-26-R  Arkansas Governor winner? — Sarah Huckabee Sanders  [0.948/0.982]",
+        "0.49  GOVPARTYAR-26-D  Arkansas Governor winner? — Fred Love  [0.016/0.044]",
+        "0.23  KXVOTEGENERAL-GOVPARTYAR-26FLOV-32  Arkansas Governor election: Fredrick Love vote percent — At least 32%  [no quote]"
       ],
       "polymarket": [
-        "0.12  3365531  Will the Republican Party candidate win the 2026 Arkansas gubernatorial election by 30%-35  [0.026/0.051]",
-        "0.12  3365532  Will the Republican Party candidate win the 2026 Arkansas gubernatorial election by 25%-30  [0.070/0.100]",
-        "0.12  3365533  Will the Republican Party candidate win the 2026 Arkansas gubernatorial election by 20%-25  [0.260/0.270]"
+        "0.12  3365531  Will the Republican Party candidate win the 2026 Arkansas gubernatorial election by 30%-35  [0.013/0.044]",
+        "0.12  3365532  Will the Republican Party candidate win the 2026 Arkansas gubernatorial election by 25%-30  [0.015/0.080]",
+        "0.12  3365533  Will the Republican Party candidate win the 2026 Arkansas gubernatorial election by 20%-25  [0.240/0.260]"
       ]
     },
-    "superMarketLast": 0.985
+    "superMarketLast": 0.925
   },
   "848": {
     "title": "Will the Democratic Party win the Arizona Governor?",
@@ -2181,7 +2187,8 @@
   },
   "855": {
     "title": "Will the Democratic Party win the Georgia Governor?",
-    "approved": false,
+    "approved": true,
+    "lean": "D",
     "kalshi": {
       "ref": "GOVPARTYGA-26-D",
       "invert": false
@@ -2189,17 +2196,17 @@
     "polymarket": null,
     "suggestions": {
       "kalshi": [
-        "0.62  GOVPARTYGA-26-D  Georgia Governor winner? — Keisha Lance Bottoms  [0.480/0.490]",
-        "0.51  KXLTGOVGA-26-DEM  Georgia Lieutenant Governor winner? — Josh McLaurin  [0.440/0.530]",
-        "0.51  KXATTYGENGA-26-D  Georgia Attorney General winner? — Tanya Miller  [0.490/0.500]"
+        "0.62  GOVPARTYGA-26-D  Georgia Governor winner? — Keisha Lance Bottoms  [0.450/0.460]",
+        "0.47  GOVPARTYGA-26-R  Georgia Governor winner? — Rick Jackson  [0.540/0.550]",
+        "0.41  KXGA1ROUND-26NOV03-GOV  Georgia: Which elections will be won outright? — Governor  [0.910/0.939]"
       ],
       "polymarket": [
-        "0.46  4222435  Will the Democratic Party candidate win the 2026 Georgia Lieutenant Governor election?  [0.480/0.490]",
-        "0.34  4222436  Will the Republican Party candidate win the 2026 Georgia Lieutenant Governor election?  [0.490/0.510]",
-        "0.09  3365590  Will the Democratic Party candidate win the 2026 Georgia gubernatorial election by 0%-3%?  [0.110/0.290]"
+        "0.09  3365590  Will the Democratic Party candidate win the 2026 Georgia gubernatorial election by 0%-3%?  [0.130/0.280]",
+        "0.09  3365591  Will the Democratic Party candidate win the 2026 Georgia gubernatorial election by 3%-6%?  [0.130/0.150]",
+        "0.09  3365592  Will the Democratic Party candidate win the 2026 Georgia gubernatorial election by 6%-9%?  [0.010/0.090]"
       ]
     },
-    "superMarketLast": 0.485
+    "superMarketLast": 0.465
   },
   "856": {
     "title": "Will the Republican Party win the Georgia Governor?",
@@ -2457,10 +2464,7 @@
   "867": {
     "title": "Will the Democratic Party win the Nebraska Governor?",
     "approved": false,
-    "kalshi": {
-      "ref": "KXATTYGENNE-26-D",
-      "invert": false
-    },
+    "kalshi": null,
     "polymarket": null,
     "suggestions": {
       "kalshi": [
@@ -2479,10 +2483,7 @@
   "868": {
     "title": "Will the Republican Party win the Nebraska Governor?",
     "approved": false,
-    "kalshi": {
-      "ref": "KXATTYGENNE-26-R",
-      "invert": false
-    },
+    "kalshi": null,
     "polymarket": null,
     "suggestions": {
       "kalshi": [
@@ -3309,7 +3310,7 @@
   },
   "903": {
     "title": "Will the Republican Party win the IA-01 House race?",
-    "approved": false,
+    "approved": true,
     "lean": "R",
     "kalshi": {
       "ref": "HOUSEIA1-26-R",
@@ -3321,16 +3322,16 @@
     },
     "suggestions": {
       "kalshi": [
-        "0.59  HOUSEIA1-26-R  IA-01 House winner? — Mariannette Miller-Meeks  [0.160/0.170]",
+        "0.59  HOUSEIA1-26-R  IA-01 House winner? — Mariannette Miller-Meeks  [0.120/0.130]",
         "0.49  HOUSEIA1-26-I  IA-01 House winner? — Michael Bridgford  [0.010/0.020]",
-        "0.44  HOUSEIA1-26-D  IA-01 House winner? — Christina Bohannan  [0.830/0.840]"
+        "0.44  HOUSEIA1-26-D  IA-01 House winner? — Christina Bohannan  [0.870/0.890]"
       ],
       "polymarket": [
-        "0.54  942432  Will the Republican Party win the IA-01 House seat?  [0.180/0.190]",
-        "0.43  942433  Will the Democratic Party win the IA-01 House seat?  [0.820/0.830]"
+        "0.54  942432  Will the Republican Party win the IA-01 House seat?  [0.120/0.130]",
+        "0.43  942433  Will the Democratic Party win the IA-01 House seat?  [0.870/0.890]"
       ]
     },
-    "superMarketLast": 0.185
+    "superMarketLast": 0.155
   },
   "904": {
     "title": "Will the Democratic Party win the IA-02 House race?",
@@ -3384,7 +3385,7 @@
   },
   "906": {
     "title": "Will the Democratic Party win the IA-03 House race?",
-    "approved": false,
+    "approved": true,
     "lean": "D",
     "kalshi": {
       "ref": "HOUSEIA3-26-D",
@@ -3396,16 +3397,16 @@
     },
     "suggestions": {
       "kalshi": [
-        "0.59  HOUSEIA3-26-D  IA-03 House winner? — Sarah Trone Garriott  [0.750/0.760]",
-        "0.47  HOUSEIA3-26-R  IA-03 House winner? — Zach Nunn  [0.240/0.250]",
+        "0.59  HOUSEIA3-26-D  IA-03 House winner? — Sarah Trone Garriott  [0.760/0.780]",
+        "0.47  HOUSEIA3-26-R  IA-03 House winner? — Zach Nunn  [0.210/0.230]",
         "0.24  KXVOTEGENERAL-HOUSEIA3-26ZNUN-40  IA-03 House election: Zach Nunn vote percent — At least 40%  [no quote]"
       ],
       "polymarket": [
         "0.54  942445  Will the Democratic Party win the IA-03 House seat?  [0.760/0.770]",
-        "0.42  942444  Will the Republican Party win the IA-03 House seat?  [0.230/0.250]"
+        "0.42  942444  Will the Republican Party win the IA-03 House seat?  [0.210/0.220]"
       ]
     },
-    "superMarketLast": 0.755
+    "superMarketLast": 0.765
   },
   "907": {
     "title": "Will the Republican Party win the IA-03 House race?",
@@ -3434,7 +3435,7 @@
   },
   "908": {
     "title": "Will the Democratic Party win the KY-04 House race?",
-    "approved": false,
+    "approved": true,
     "lean": "D",
     "kalshi": {
       "ref": "KXHOUSERACE-KY04-26-D",
@@ -3446,17 +3447,17 @@
     },
     "suggestions": {
       "kalshi": [
-        "0.64  KXHOUSERACE-KY04-26-D  KY-04 House winner? — Melissa Claire Strange  [0.031/0.063]",
-        "0.53  KXHOUSERACE-KY04-26-R  KY-04 House winner? — Ed Gallrein  [0.918/0.961]",
-        "0.26  KXVOTEGENERAL-KXHOUSERACE-KY04-26EGAL-58  KY-04 House election: Ed Gallrein vote percent — At least 58%  [0.780/0.870]"
+        "0.64  KXHOUSERACE-KY04-26-D  KY-04 House winner? — Melissa Claire Strange  [0.015/0.038]",
+        "0.53  KXHOUSERACE-KY04-26-R  KY-04 House winner? — Ed Gallrein  [0.950/0.961]",
+        "0.26  KXVOTEGENERAL-KXHOUSERACE-KY04-26EGAL-50  KY-04 House election: Ed Gallrein vote percent — At least 50%  [0.010/0.990]"
       ],
       "polymarket": [
-        "0.59  1283569  Will the Democratic Party win the KY-04 House seat?  [0.007/0.027]",
-        "0.44  1283568  Will the Republican Party win the KY-04 House seat?  [0.956/0.969]",
+        "0.59  1283569  Will the Democratic Party win the KY-04 House seat?  [0.009/0.027]",
+        "0.44  1283568  Will the Republican Party win the KY-04 House seat?  [0.956/0.980]",
         "0.14  3489845  Will the Democratic Party candidate win the 2026 KY-04 House election?  [no quote]"
       ]
     },
-    "superMarketLast": 0.045
+    "superMarketLast": 0.055
   },
   "909": {
     "title": "Will the Republican Party win the KY-04 House race?",
@@ -3661,7 +3662,7 @@
   },
   "917": {
     "title": "Will the Republican Party win the NJ-07 House race?",
-    "approved": false,
+    "approved": true,
     "lean": "R",
     "kalshi": {
       "ref": "HOUSENJ7-26-R",
@@ -3673,20 +3674,21 @@
     },
     "suggestions": {
       "kalshi": [
-        "0.62  HOUSENJ7-26-R  NJ-07 House winner? — Thomas Kean Jr.  [0.110/0.120]",
-        "0.50  HOUSENJ7-26-D  NJ-07 House winner? — Rebecca Bennett  [0.870/0.880]",
+        "0.62  HOUSENJ7-26-R  NJ-07 House winner? — Thomas Kean Jr.  [0.083/0.090]",
+        "0.50  HOUSENJ7-26-D  NJ-07 House winner? — Rebecca Bennett  [0.907/0.910]",
         "0.27  KXVOTEGENERAL-HOUSENJ7-26RBEN-44  NJ-07 House election: Rebecca Bennett vote percent — At least 44%  [no quote]"
       ],
       "polymarket": [
-        "0.56  942978  Will the Republican Party win the NJ-07 House seat?  [0.090/0.120]",
-        "0.46  942979  Will the Democratic Party win the NJ-07 House seat?  [0.880/0.900]"
+        "0.56  942978  Will the Republican Party win the NJ-07 House seat?  [0.070/0.090]",
+        "0.46  942979  Will the Democratic Party win the NJ-07 House seat?  [0.900/0.910]"
       ]
     },
-    "superMarketLast": 0.13
+    "superMarketLast": 0.1
   },
   "918": {
     "title": "Will the Democratic Party win the NY-13 House race?",
-    "approved": false,
+    "approved": true,
+    "lean": "D",
     "kalshi": {
       "ref": "KXHOUSERACE-NY13-26-D",
       "invert": false
@@ -3697,17 +3699,17 @@
     },
     "suggestions": {
       "kalshi": [
-        "0.64  KXHOUSERACE-NY13-26-D  NY-13 House winner? — Darializa Avila Chevalier  [0.953/0.992]",
-        "0.44  KXHOUSERACE-NY13-26-R  NY-13 House winner? — Manual \"Jomo\" Williams  [0.003/0.047]",
+        "0.64  KXHOUSERACE-NY13-26-D  NY-13 House winner? — Darializa Avila Chevalier  [0.955/0.990]",
+        "0.44  KXHOUSERACE-NY13-26-R  NY-13 House winner? — Manual \"Jomo\" Williams  [0.005/0.044]",
         "0.25  KXVOTEGENERAL-KXHOUSERACE-NY13-26JWIL-4  NY-13 House election: Jomo Williams vote percent — At least 4%  [no quote]"
       ],
       "polymarket": [
         "0.53  1284299  Will the Democratic Party win the NY-13 House seat?  [0.972/0.973]",
-        "0.41  1284298  Will the Republican Party win the NY-13 House seat?  [0.018/0.029]",
-        "0.12  3519710  Will the Democratic Party candidate win the 2026 NY-13 House election by 0%-45%?  [0.010/0.030]"
+        "0.41  1284298  Will the Republican Party win the NY-13 House seat?  [0.017/0.029]",
+        "0.12  3519710  Will the Democratic Party candidate win the 2026 NY-13 House election by 0%-45%?  [0.010/0.011]"
       ]
     },
-    "superMarketLast": 0.97
+    "superMarketLast": 0.945
   },
   "919": {
     "title": "Will the Republican Party win the NY-13 House race?",
@@ -4062,7 +4064,8 @@
   },
   "933": {
     "title": "Will the Republican Party win the TX-15 House race?",
-    "approved": false,
+    "approved": true,
+    "lean": "R",
     "kalshi": {
       "ref": "HOUSETX15-26-R",
       "invert": false
@@ -4073,16 +4076,16 @@
     },
     "suggestions": {
       "kalshi": [
-        "0.61  HOUSETX15-26-R  TX-15 House winner? — Monica De La Cruz  [0.200/0.210]",
-        "0.54  HOUSETX15-26-D  TX-15 House winner? — Bobby Pulido  [0.800/0.810]",
+        "0.61  HOUSETX15-26-R  TX-15 House winner? — Monica De La Cruz  [0.170/0.180]",
+        "0.54  HOUSETX15-26-D  TX-15 House winner? — Bobby Pulido  [0.820/0.830]",
         "0.25  KXVOTEGENERAL-HOUSETX15-26BPUL-42  TX-15 House election: Bobby Pulido vote percent — At least 42%  [no quote]"
       ],
       "polymarket": [
-        "0.52  944199  Will the Republican Party win the TX-15 House seat?  [0.190/0.210]",
-        "0.46  944201  Will the Democratic Party win the TX-15 House seat?  [0.780/0.790]"
+        "0.52  944199  Will the Republican Party win the TX-15 House seat?  [0.190/0.200]",
+        "0.46  944201  Will the Democratic Party win the TX-15 House seat?  [0.790/0.800]"
       ]
     },
-    "superMarketLast": 0.26
+    "superMarketLast": 0.205
   },
   "934": {
     "title": "Will the Democratic Party win the TX-23 House race?",
@@ -4261,7 +4264,8 @@
   },
   "941": {
     "title": "Will the Democratic Party win the Alabama Senate?",
-    "approved": false,
+    "approved": true,
+    "lean": "D",
     "kalshi": {
       "ref": "SENATEAL-26-D",
       "invert": false
@@ -4269,17 +4273,17 @@
     "polymarket": null,
     "suggestions": {
       "kalshi": [
-        "0.53  SENATEAL-26-D  Alabama Senate winner? — Everett Wess  [0.016/0.029]",
-        "0.51  SENATEAL-26-R  Alabama Senate winner? — Barry Moore  [0.965/0.984]",
-        "0.50  GOVPARTYAL-26-D  Alabama Governor winner? — Doug Jones  [0.082/0.087]"
+        "0.53  SENATEAL-26-D  Alabama Senate winner? — Everett Wess  [0.025/0.035]",
+        "0.51  SENATEAL-26-R  Alabama Senate winner? — Barry Moore  [0.964/0.982]",
+        "0.33  CONTROLS-2026-D  Which party will win the U.S. Senate? — Democratic Party  [0.600/0.610]"
       ],
       "polymarket": [
         "0.28  562793  Will the Democratic Party control the Senate after the 2026 Midterm elections?  [0.620/0.630]",
-        "0.19  562802  Will the Democratic Party control the House after the 2026 Midterm elections?  [0.920/0.930]",
-        "0.16  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]"
+        "0.16  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]",
+        "0.14  3343108  Will the Democratic Party candidate win the 2026 Alabama Senate election?  [0.003/0.016]"
       ]
     },
-    "superMarketLast": 0.04
+    "superMarketLast": 0.055
   },
   "942": {
     "title": "Will the Republican Party win the Alabama Senate?",
@@ -4306,25 +4310,26 @@
   },
   "943": {
     "title": "Will the Democratic Party win the Arkansas Senate?",
-    "approved": false,
+    "approved": true,
+    "lean": "D",
     "kalshi": {
-      "ref": "KXATTYGENAR-26-D",
+      "ref": "SENATEAR-26-D",
       "invert": false
     },
     "polymarket": null,
     "suggestions": {
       "kalshi": [
-        "0.64  KXATTYGENAR-26-D  Arkansas Attorney General winner? — Democratic party  [0.025/0.026]",
-        "0.53  SENATEAR-26-D  Arkansas Senate winner? — Hallie Shoffner  [0.064/0.073]",
-        "0.52  GOVPARTYAR-26-D  Arkansas Governor winner? — Fred Love  [0.016/0.036]"
+        "0.53  SENATEAR-26-D  Arkansas Senate winner? — Hallie Shoffner  [0.066/0.067]",
+        "0.50  SENATEAR-26-R  Arkansas Senate winner? — Tom Cotton  [0.939/0.940]",
+        "0.33  CONTROLS-2026-D  Which party will win the U.S. Senate? — Democratic Party  [0.600/0.610]"
       ],
       "polymarket": [
         "0.28  562793  Will the Democratic Party control the Senate after the 2026 Midterm elections?  [0.620/0.630]",
-        "0.19  562802  Will the Democratic Party control the House after the 2026 Midterm elections?  [0.920/0.930]",
-        "0.17  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]"
+        "0.17  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]",
+        "0.14  3343127  Will the Democratic Party candidate win the 2026 Arkansas Senate election?  [0.031/0.040]"
       ]
     },
-    "superMarketLast": 0.065
+    "superMarketLast": 0.085
   },
   "944": {
     "title": "Will the Republican Party win the Arkansas Senate?",
@@ -4351,25 +4356,26 @@
   },
   "945": {
     "title": "Will the Democratic Party win the Colorado Senate?",
-    "approved": false,
+    "approved": true,
+    "lean": "D",
     "kalshi": {
-      "ref": "KXPARAGUAYSENATE-28-CO",
+      "ref": "SENATECO-26-D",
       "invert": false
     },
     "polymarket": null,
     "suggestions": {
       "kalshi": [
-        "0.57  KXPARAGUAYSENATE-28-CO  Paraguayan Senate election winner? — Colorado  [0.770/0.840]",
-        "0.52  SENATECO-26-D  Colorado Senate winner? — John Hickenlooper  [0.984/0.989]",
-        "0.52  KXATTYGENCO-26-D  Colorado Attorney General winner? — Jena Griswold  [0.935/0.936]"
+        "0.52  SENATECO-26-D  Colorado Senate winner? — John Hickenlooper  [0.980/0.987]",
+        "0.50  SENATECO-26-R  Colorado Senate winner? — Mark Baisley  [0.003/0.012]",
+        "0.42  KXSTATELEG-COSENA26-D  Colorado State Senate winner? — Democratic party  [0.970/0.980]"
       ],
       "polymarket": [
         "0.29  562793  Will the Democratic Party control the Senate after the 2026 Midterm elections?  [0.620/0.630]",
-        "0.20  562802  Will the Democratic Party control the House after the 2026 Midterm elections?  [0.920/0.930]",
-        "0.18  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]"
+        "0.18  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]",
+        "0.10  3343131  Will the Democratic Party candidate win the 2026 Colorado Senate election by 0%-5%?  [0.008/0.073]"
       ]
     },
-    "superMarketLast": 0.97
+    "superMarketLast": 0.93
   },
   "946": {
     "title": "Will the Republican Party win the Colorado Senate?",
@@ -4396,7 +4402,8 @@
   },
   "947": {
     "title": "Will the Democratic Party win the Georgia Senate?",
-    "approved": false,
+    "approved": true,
+    "lean": "D",
     "kalshi": {
       "ref": "SENATEGA-26-D",
       "invert": false
@@ -4404,17 +4411,17 @@
     "polymarket": null,
     "suggestions": {
       "kalshi": [
-        "0.54  SENATEGA-26-D  Georgia Senate winner? — Jon Ossoff  [0.953/0.968]",
-        "0.51  KXATTYGENGA-26-D  Georgia Attorney General winner? — Tanya Miller  [0.490/0.500]",
-        "0.48  SENATEGA-26-R  Georgia Senate winner? — Mike Collins  [0.037/0.046]"
+        "0.54  SENATEGA-26-D  Georgia Senate winner? — Jon Ossoff  [0.954/0.955]",
+        "0.48  SENATEGA-26-R  Georgia Senate winner? — Mike Collins  [0.043/0.049]",
+        "0.41  KXSTATELEG-GASEN26-D  Georgia State Senate winner? — Democratic party  [0.080/0.090]"
       ],
       "polymarket": [
         "0.27  562793  Will the Democratic Party control the Senate after the 2026 Midterm elections?  [0.620/0.630]",
-        "0.18  562802  Will the Democratic Party control the House after the 2026 Midterm elections?  [0.920/0.930]",
-        "0.17  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]"
+        "0.17  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]",
+        "0.09  3343192  Will the Democratic Party candidate win the first round of the 2026 Georgia Senate electio  [0.011/0.098]"
       ]
     },
-    "superMarketLast": 0.95
+    "superMarketLast": 0.945
   },
   "948": {
     "title": "Will the Republican Party win the Georgia Senate?",
@@ -4441,7 +4448,7 @@
   },
   "949": {
     "title": "Will the Democratic Party win the Iowa Senate?",
-    "approved": false,
+    "approved": true,
     "lean": "D",
     "kalshi": {
       "ref": "SENATEIA-26-D",
@@ -4450,17 +4457,17 @@
     "polymarket": null,
     "suggestions": {
       "kalshi": [
-        "0.53  SENATEIA-26-D  Iowa Senate winner? — Josh Turek  [0.420/0.430]",
-        "0.51  KXATTYGENIA-26-D  Iowa Attorney General winner? — Nate Willems  [0.440/0.450]",
-        "0.51  GOVPARTYIA-26-D  Iowa Governor winner? — Rob Sand  [0.840/0.850]"
+        "0.53  SENATEIA-26-D  Iowa Senate winner? — Josh Turek  [0.430/0.440]",
+        "0.47  SENATEIA-26-R  Iowa Senate winner? — Ashley Hinson  [0.560/0.570]",
+        "0.43  KXIASENATE-26-AHIN  Iowa Senate winner? (Person) — Ashley Hinson  [0.560/0.590]"
       ],
       "polymarket": [
         "0.28  562793  Will the Democratic Party control the Senate after the 2026 Midterm elections?  [0.620/0.630]",
-        "0.19  562802  Will the Democratic Party control the House after the 2026 Midterm elections?  [0.920/0.930]",
-        "0.17  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]"
+        "0.17  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]",
+        "0.10  3343531  Will the Democratic Party candidate win the 2026 Iowa Senate election by 0%-3%?  [0.310/0.380]"
       ]
     },
-    "superMarketLast": 0.425
+    "superMarketLast": 0.445
   },
   "950": {
     "title": "Will the Republican Party win the Iowa Senate?",
@@ -4487,7 +4494,8 @@
   },
   "951": {
     "title": "Will the Democratic Party win the Idaho Senate?",
-    "approved": false,
+    "approved": true,
+    "lean": "D",
     "kalshi": {
       "ref": "SENATEID-26-D",
       "invert": false
@@ -4495,17 +4503,17 @@
     "polymarket": null,
     "suggestions": {
       "kalshi": [
-        "0.54  SENATEID-26-D  Idaho Senate winner? — David Roth  [0.004/0.006]",
-        "0.51  GOVPARTYID-26-D  Idaho Governor winner? — Terri Pickens  [0.009/0.041]",
-        "0.48  SENATEID-26-TACH  Idaho Senate winner? — Todd Achilles  [0.070/0.080]"
+        "0.54  SENATEID-26-D  Idaho Senate winner? — David Roth  [0.002/0.003]",
+        "0.48  SENATEID-26-TACH  Idaho Senate winner? — Todd Achilles  [0.060/0.070]",
+        "0.46  SENATEID-26-R  Idaho Senate winner? — Jim Risch  [0.935/0.936]"
       ],
       "polymarket": [
         "0.28  562793  Will the Democratic Party control the Senate after the 2026 Midterm elections?  [0.620/0.630]",
-        "0.19  562802  Will the Democratic Party control the House after the 2026 Midterm elections?  [0.920/0.930]",
-        "0.17  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]"
+        "0.17  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]",
+        "0.14  3343316  Will the Democratic Party candidate win the 2026 Idaho Senate election?  [0.012/0.024]"
       ]
     },
-    "superMarketLast": 0.05
+    "superMarketLast": 0.04
   },
   "952": {
     "title": "Will the Republican Party win the Idaho Senate?",
@@ -4532,7 +4540,8 @@
   },
   "953": {
     "title": "Will the Democratic Party win the Illinois Senate?",
-    "approved": false,
+    "approved": true,
+    "lean": "D",
     "kalshi": {
       "ref": "SENATEIL-26-D",
       "invert": false
@@ -4540,17 +4549,17 @@
     "polymarket": null,
     "suggestions": {
       "kalshi": [
-        "0.52  SENATEIL-26-D  Illinois Senate winner? — Juliana Stratton  [0.981/0.984]",
-        "0.51  KXATTYGENIL-26-D  Illinois Attorney General winner? — Kwame Raoul  [0.964/0.965]",
-        "0.50  GOVPARTYIL-26-D  Illinois Governor winner? — JB Pritzker  [0.963/0.981]"
+        "0.52  SENATEIL-26-D  Illinois Senate winner? — Juliana Stratton  [0.973/0.977]",
+        "0.50  SENATEIL-26-R  Illinois Senate winner? — Don Tracy  [0.016/0.030]",
+        "0.32  CONTROLS-2026-D  Which party will win the U.S. Senate? — Democratic Party  [0.600/0.610]"
       ],
       "polymarket": [
         "0.27  562793  Will the Democratic Party control the Senate after the 2026 Midterm elections?  [0.620/0.630]",
-        "0.18  562802  Will the Democratic Party control the House after the 2026 Midterm elections?  [0.920/0.930]",
-        "0.17  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]"
+        "0.17  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]",
+        "0.12  3343322  Will the Democratic Party candidate win the 2026 Illinois Senate election by 0%-5%?  [0.011/0.050]"
       ]
     },
-    "superMarketLast": 0.945
+    "superMarketLast": 0.96
   },
   "954": {
     "title": "Will the Republican Party win the Illinois Senate?",
@@ -4578,10 +4587,7 @@
   "955": {
     "title": "Will the Democratic Party win the Kentucky Senate?",
     "approved": false,
-    "kalshi": {
-      "ref": "SENATELA-26-D",
-      "invert": false
-    },
+    "kalshi": null,
     "polymarket": null,
     "suggestions": {
       "kalshi": [
@@ -4620,7 +4626,8 @@
   },
   "957": {
     "title": "Will the Democratic Party win the Louisiana Senate?",
-    "approved": false,
+    "approved": true,
+    "lean": "D",
     "kalshi": {
       "ref": "KXSENATELA-26NOV-D",
       "invert": false
@@ -4628,17 +4635,17 @@
     "polymarket": null,
     "suggestions": {
       "kalshi": [
-        "0.54  KXSENATELA-26NOV-D  Louisiana Senate winner? — Jamie Davis  [0.070/0.079]",
-        "0.49  KXSENATELA-26NOV-R  Louisiana Senate winner? — Julia Letlow  [0.915/0.925]",
-        "0.32  CONTROLS-2026-D  Which party will win the U.S. Senate? — Democratic Party  [0.620/0.630]"
+        "0.54  KXSENATELA-26NOV-D  Louisiana Senate winner? — Jamie Davis  [0.043/0.049]",
+        "0.49  KXSENATELA-26NOV-R  Louisiana Senate winner? — Julia Letlow  [0.942/0.951]",
+        "0.32  CONTROLS-2026-D  Which party will win the U.S. Senate? — Democratic Party  [0.600/0.610]"
       ],
       "polymarket": [
         "0.27  562793  Will the Democratic Party control the Senate after the 2026 Midterm elections?  [0.620/0.630]",
-        "0.19  562802  Will the Democratic Party control the House after the 2026 Midterm elections?  [0.920/0.930]",
-        "0.17  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]"
+        "0.17  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]",
+        "0.14  3343578  Will the Democratic Party candidate win the 2026 Louisiana Senate election?  [0.020/0.090]"
       ]
     },
-    "superMarketLast": 0.07
+    "superMarketLast": 0.065
   },
   "958": {
     "title": "Will the Republican Party win the Louisiana Senate?",
@@ -4665,7 +4672,7 @@
   },
   "959": {
     "title": "Will the Democratic Party win the Maine Senate?",
-    "approved": false,
+    "approved": true,
     "lean": "D",
     "kalshi": {
       "ref": "SENATEME-26-D",
@@ -4674,17 +4681,17 @@
     "polymarket": null,
     "suggestions": {
       "kalshi": [
-        "0.53  SENATEME-26-D  Maine Senate winner? — Troy Jackson  [0.580/0.590]",
-        "0.49  GOVPARTYME-26-D  Maine Governor winner? — Hannah Pingree  [0.925/0.931]",
-        "0.47  SENATEME-26-R  Maine Senate winner? — Susan Collins  [0.410/0.420]"
+        "0.53  SENATEME-26-D  Maine Senate winner? — Troy Jackson  [0.560/0.580]",
+        "0.47  SENATEME-26-R  Maine Senate winner? — Susan Collins  [0.420/0.430]",
+        "0.41  KXSTATELEG-MESEN26-D  Maine State Senate winner? — Democratic party  [0.870/0.880]"
       ],
       "polymarket": [
-        "0.31  4443225  Will the Democratic Party control the Maine Senate after the 2026 Midterm elections?  [0.810/0.820]",
+        "0.31  4443225  Will the Democratic Party control the Maine Senate after the 2026 Midterm elections?  [0.860/0.870]",
         "0.28  562793  Will the Democratic Party control the Senate after the 2026 Midterm elections?  [0.620/0.630]",
-        "0.21  4443226  Will the Republican Party control the Maine Senate after the 2026 Midterm elections?  [0.120/0.150]"
+        "0.21  4443226  Will the Republican Party control the Maine Senate after the 2026 Midterm elections?  [0.130/0.150]"
       ]
     },
-    "superMarketLast": 0.58
+    "superMarketLast": 0.59
   },
   "960": {
     "title": "Will the Republican Party win the Maine Senate?",
@@ -4711,7 +4718,8 @@
   },
   "961": {
     "title": "Will the Democratic Party win the Mississippi Senate?",
-    "approved": false,
+    "approved": true,
+    "lean": "D",
     "kalshi": {
       "ref": "SENATEMS-26-D",
       "invert": false
@@ -4719,21 +4727,22 @@
     "polymarket": null,
     "suggestions": {
       "kalshi": [
-        "0.54  SENATEMS-26-D  Mississippi Senate winner? — Scott Colom  [0.095/0.110]",
-        "0.45  SENATEMS-26-R  Mississippi Senate winner? — Cindy Hyde-Smith  [0.901/0.902]",
-        "0.32  CONTROLS-2026-D  Which party will win the U.S. Senate? — Democratic Party  [0.620/0.630]"
+        "0.54  SENATEMS-26-D  Mississippi Senate winner? — Scott Colom  [0.078/0.084]",
+        "0.45  SENATEMS-26-R  Mississippi Senate winner? — Cindy Hyde-Smith  [0.915/0.922]",
+        "0.32  CONTROLS-2026-D  Which party will win the U.S. Senate? — Democratic Party  [0.600/0.610]"
       ],
       "polymarket": [
         "0.27  562793  Will the Democratic Party control the Senate after the 2026 Midterm elections?  [0.620/0.630]",
-        "0.17  562802  Will the Democratic Party control the House after the 2026 Midterm elections?  [0.920/0.930]",
-        "0.17  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]"
+        "0.17  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]",
+        "0.12  3343915  Will the Democratic Party candidate win the 2026 Mississippi Senate election?  [0.064/0.077]"
       ]
     },
-    "superMarketLast": 0.095
+    "superMarketLast": 0.12
   },
   "962": {
     "title": "Will the Republican Party win the Mississippi Senate?",
-    "approved": false,
+    "approved": true,
+    "lean": "R",
     "kalshi": {
       "ref": "SENATEMS-26-R",
       "invert": false
@@ -4741,39 +4750,38 @@
     "polymarket": null,
     "suggestions": {
       "kalshi": [
-        "0.64  SENATEMS-26-R  Mississippi Senate winner? — Cindy Hyde-Smith  [0.901/0.902]",
-        "0.48  SENATEMS-26-D  Mississippi Senate winner? — Scott Colom  [0.095/0.110]",
-        "0.32  CONTROLS-2026-R  Which party will win the U.S. Senate? — Republican Party  [0.370/0.380]"
+        "0.64  SENATEMS-26-R  Mississippi Senate winner? — Cindy Hyde-Smith  [0.915/0.922]",
+        "0.48  SENATEMS-26-D  Mississippi Senate winner? — Scott Colom  [0.078/0.084]",
+        "0.32  CONTROLS-2026-R  Which party will win the U.S. Senate? — Republican Party  [0.390/0.400]"
       ],
       "polymarket": [
         "0.28  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]",
-        "0.18  562803  Will the Republican Party control the House after the 2026 Midterm elections?  [0.070/0.080]",
-        "0.17  562793  Will the Democratic Party control the Senate after the 2026 Midterm elections?  [0.620/0.630]"
+        "0.17  562793  Will the Democratic Party control the Senate after the 2026 Midterm elections?  [0.620/0.630]",
+        "0.10  3343913  Will the Republican Party candidate win the 2026 Mississippi Senate election by 5%-10%?  [0.230/0.260]"
       ]
     },
-    "superMarketLast": 0.905
+    "superMarketLast": 0.89
   },
   "963": {
     "title": "Will the Democratic Party win the Montana Senate?",
     "approved": false,
-    "kalshi": {
-      "ref": "SENATEMT-26-D",
-      "invert": false
-    },
+    "rejected": true,
+    "lean": "D",
+    "kalshi": null,
     "polymarket": null,
     "suggestions": {
       "kalshi": [
-        "0.53  SENATEMT-26-D  Montana Senate winner? — Alani Bankhead  [0.001/0.011]",
-        "0.50  SENATEMT-26-R  Montana Senate winner? — Kurt Alme  [0.912/0.920]",
-        "0.49  SENATEMT-26-IND  Montana Senate winner? — Seth Bodnar  [0.079/0.085]"
+        "0.53  SENATEMT-26-D  Montana Senate winner? — Alani Bankhead  [0.008/0.009]",
+        "0.50  SENATEMT-26-R  Montana Senate winner? — Kurt Alme  [0.924/0.938]",
+        "0.49  SENATEMT-26-IND  Montana Senate winner? — Seth Bodnar  [0.056/0.073]"
       ],
       "polymarket": [
         "0.27  562793  Will the Democratic Party control the Senate after the 2026 Midterm elections?  [0.620/0.630]",
         "0.18  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]",
-        "0.18  562802  Will the Democratic Party control the House after the 2026 Midterm elections?  [0.920/0.930]"
+        "0.14  3364160  Will the Democratic Party Candidate win the 2026 Montana Senate election?  [0.001/0.002]"
       ]
     },
-    "superMarketLast": 0.055
+    "superMarketLast": 0.075
   },
   "964": {
     "title": "Will the Republican Party win the Montana Senate?",
@@ -4801,28 +4809,27 @@
   "965": {
     "title": "Will the Independent Party win the Montana Senate?",
     "approved": false,
-    "kalshi": {
-      "ref": "SENATEMT-26-IND",
-      "invert": false
-    },
+    "rejected": true,
+    "kalshi": null,
     "polymarket": null,
     "suggestions": {
       "kalshi": [
-        "0.55  SENATEMT-26-IND  Montana Senate winner? — Seth Bodnar  [0.079/0.085]",
-        "0.49  SENATEMT-26-D  Montana Senate winner? — Alani Bankhead  [0.001/0.011]",
-        "0.49  SENATEMT-26-R  Montana Senate winner? — Kurt Alme  [0.912/0.920]"
+        "0.55  SENATEMT-26-IND  Montana Senate winner? — Seth Bodnar  [0.056/0.073]",
+        "0.49  SENATEMT-26-D  Montana Senate winner? — Alani Bankhead  [0.008/0.009]",
+        "0.49  SENATEMT-26-R  Montana Senate winner? — Kurt Alme  [0.924/0.938]"
       ],
       "polymarket": [
         "0.18  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]",
         "0.18  562793  Will the Democratic Party control the Senate after the 2026 Midterm elections?  [0.620/0.630]",
-        "0.12  3364155  Will an Independent candidate win the 2026 Montana Senate election by 0%-3%?  [0.009/0.059]"
+        "0.12  3364155  Will an Independent candidate win the 2026 Montana Senate election by 0%-3%?  [0.011/0.119]"
       ]
     },
-    "superMarketLast": 0.07
+    "superMarketLast": 0.05
   },
   "966": {
     "title": "Will the Democratic Party win the North Carolina Senate?",
-    "approved": false,
+    "approved": true,
+    "lean": "D",
     "kalshi": {
       "ref": "SENATENC-26-D",
       "invert": false
@@ -4830,17 +4837,17 @@
     "polymarket": null,
     "suggestions": {
       "kalshi": [
-        "0.60  SENATENC-26-D  North Carolina Senate winner? — Roy Cooper  [0.941/0.942]",
-        "0.54  SENATENC-26-R  North Carolina Senate winner? — Michael Whatley  [0.058/0.062]",
-        "0.44  KXNCCOURT-26-SSTE  North Carolina Supreme Court winner? — Sarah Stevens  [0.160/0.240]"
+        "0.60  SENATENC-26-D  North Carolina Senate winner? — Roy Cooper  [0.958/0.960]",
+        "0.54  SENATENC-26-R  North Carolina Senate winner? — Michael Whatley  [0.039/0.042]",
+        "0.44  KXNCCOURT-26-SSTE  North Carolina Supreme Court winner? — Sarah Stevens  [0.150/0.210]"
       ],
       "polymarket": [
         "0.26  562793  Will the Democratic Party control the Senate after the 2026 Midterm elections?  [0.620/0.630]",
-        "0.18  562802  Will the Democratic Party control the House after the 2026 Midterm elections?  [0.920/0.930]",
-        "0.16  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]"
+        "0.16  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]",
+        "0.12  3344033  Will the Democratic Party candidate win the 2026 North Carolina Senate election by 0%-3%?  [0.140/0.150]"
       ]
     },
-    "superMarketLast": 0.94
+    "superMarketLast": 0.945
   },
   "967": {
     "title": "Will the Republican Party win the North Carolina Senate?",
@@ -4868,24 +4875,22 @@
   "968": {
     "title": "Will the Democratic Party win the Nebraska Senate?",
     "approved": false,
-    "kalshi": {
-      "ref": "SENATENE-26-D",
-      "invert": false
-    },
+    "rejected": true,
+    "lean": "D",
+    "kalshi": null,
     "polymarket": null,
     "suggestions": {
       "kalshi": [
         "0.53  SENATENE-26-D  Nebraska Senate winner? — Cindy Burbank  [no quote]",
-        "0.47  KXATTYGENNE-26-D  Nebraska Attorney General winner? — Jocelyn Brasher  [0.059/0.060]",
-        "0.46  SENATENE-26-R  Nebraska Senate winner? — Pete Ricketts  [0.720/0.730]"
+        "0.46  SENATENE-26-R  Nebraska Senate winner? — Pete Ricketts  [0.720/0.740]",
+        "0.45  SENATENE-26-DOSB  Nebraska Senate winner? — Dan Osborn  [0.270/0.280]"
       ],
       "polymarket": [
         "0.27  562793  Will the Democratic Party control the Senate after the 2026 Midterm elections?  [0.620/0.630]",
-        "0.18  562802  Will the Democratic Party control the House after the 2026 Midterm elections?  [0.920/0.930]",
         "0.17  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]"
       ]
     },
-    "superMarketLast": 0.035
+    "superMarketLast": 0.04
   },
   "969": {
     "title": "Will the Independent Party win the Nebraska Senate?",
@@ -4934,7 +4939,8 @@
   },
   "971": {
     "title": "Will the Democratic Party win the New Jersey Senate?",
-    "approved": false,
+    "approved": true,
+    "lean": "D",
     "kalshi": {
       "ref": "SENATENJ-26-D",
       "invert": false
@@ -4942,17 +4948,17 @@
     "polymarket": null,
     "suggestions": {
       "kalshi": [
-        "0.59  SENATENJ-26-D  New Jersey Senate winner? — Cory Booker  [0.980/0.981]",
-        "0.52  SENATENJ-26-R  New Jersey Senate winner? — Justin Murphy  [0.005/0.017]",
-        "0.28  KXREDISTRICTING-26-NJ  Which states will redistrict before the midterms? — New Jersey  [0.010/0.015]"
+        "0.59  SENATENJ-26-D  New Jersey Senate winner? — Cory Booker  [0.984/0.990]",
+        "0.52  SENATENJ-26-R  New Jersey Senate winner? — Justin Murphy  [0.009/0.019]",
+        "0.28  CONTROLS-2026-D  Which party will win the U.S. Senate? — Democratic Party  [0.600/0.610]"
       ],
       "polymarket": [
         "0.24  562793  Will the Democratic Party control the Senate after the 2026 Midterm elections?  [0.620/0.630]",
-        "0.16  562802  Will the Democratic Party control the House after the 2026 Midterm elections?  [0.920/0.930]",
-        "0.16  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]"
+        "0.16  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]",
+        "0.13  3343949  Will the Democratic Party candidate win the 2026 New Jersey Senate election by 0%-3%?  [0.028/0.189]"
       ]
     },
-    "superMarketLast": 0.98
+    "superMarketLast": 0.955
   },
   "972": {
     "title": "Will the Republican Party win the New Jersey Senate?",
@@ -4979,22 +4985,23 @@
   },
   "973": {
     "title": "Will the Democratic Party win the New Mexico Senate?",
-    "approved": false,
+    "approved": true,
+    "lean": "D",
     "kalshi": {
-      "ref": "GOVPARTYNM-26-D",
+      "ref": "SENATENM-26-D",
       "invert": false
     },
     "polymarket": null,
     "suggestions": {
       "kalshi": [
-        "0.54  GOVPARTYNM-26-D  New Mexico Governor winner? — Deb Haaland  [0.936/0.944]",
-        "0.52  KXATTYGENNM-26-D  New Mexico Attorney General winner? — Raúl Torrez  [0.952/0.953]",
-        "0.52  SENATENM-26-D  New Mexico Senate winner? — Ben Ray Luján  [0.977/0.985]"
+        "0.52  SENATENM-26-D  New Mexico Senate winner? — Ben Ray Luján  [0.969/0.980]",
+        "0.51  SENATENM-26-R  New Mexico Senate winner? — Larry E. Marker  [0.011/0.019]",
+        "0.28  CONTROLS-2026-D  Which party will win the U.S. Senate? — Democratic Party  [0.600/0.610]"
       ],
       "polymarket": [
         "0.24  562793  Will the Democratic Party control the Senate after the 2026 Midterm elections?  [0.620/0.630]",
-        "0.17  562802  Will the Democratic Party control the House after the 2026 Midterm elections?  [0.920/0.930]",
-        "0.16  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]"
+        "0.16  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]",
+        "0.13  3343967  Will the Democratic Party candidate win the 2026 New Mexico Senate election by 0%-3%?  [0.009/0.042]"
       ]
     },
     "superMarketLast": 0.96
@@ -5047,7 +5054,8 @@
   },
   "976": {
     "title": "Will the Democratic Party win the Oregon Senate?",
-    "approved": false,
+    "approved": true,
+    "lean": "D",
     "kalshi": {
       "ref": "SENATEOR-26-D",
       "invert": false
@@ -5055,21 +5063,22 @@
     "polymarket": null,
     "suggestions": {
       "kalshi": [
-        "0.53  SENATEOR-26-D  Oregon Senate winner? — Jeff Merkley  [0.977/0.991]",
-        "0.51  GOVPARTYOR-26-D  Oregon Governor winner? — Tina Kotek  [0.760/0.770]",
-        "0.44  SENATEOR-26-R  Oregon Senate winner? — David Brock Smith  [0.008/0.011]"
+        "0.53  SENATEOR-26-D  Oregon Senate winner? — Jeff Merkley  [0.977/0.989]",
+        "0.44  SENATEOR-26-R  Oregon Senate winner? — David Brock Smith  [0.018/0.023]",
+        "0.41  KXSTATELEG-ORSENA26-D  Oregon State Senate winner? — Democratic party  [0.970/0.980]"
       ],
       "polymarket": [
         "0.27  562793  Will the Democratic Party control the Senate after the 2026 Midterm elections?  [0.620/0.630]",
         "0.19  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]",
-        "0.18  562802  Will the Democratic Party control the House after the 2026 Midterm elections?  [0.920/0.930]"
+        "0.12  3344086  Will the Democratic Party candidate win the 2026 Oregon Senate election by 0%-5%?  [0.008/0.080]"
       ]
     },
-    "superMarketLast": 0.97
+    "superMarketLast": 0.935
   },
   "977": {
     "title": "Will the Republican Party win the Oregon Senate?",
-    "approved": false,
+    "approved": true,
+    "lean": "R",
     "kalshi": {
       "ref": "SENATEOR-26-R",
       "invert": false
@@ -5077,21 +5086,22 @@
     "polymarket": null,
     "suggestions": {
       "kalshi": [
-        "0.63  SENATEOR-26-R  Oregon Senate winner? — David Brock Smith  [0.008/0.011]",
-        "0.47  GOVPARTYOR-26-R  Oregon Governor winner? — Christine Drazan  [0.240/0.250]",
-        "0.45  SENATEOR-26-D  Oregon Senate winner? — Jeff Merkley  [0.977/0.991]"
+        "0.63  SENATEOR-26-R  Oregon Senate winner? — David Brock Smith  [0.018/0.023]",
+        "0.45  SENATEOR-26-D  Oregon Senate winner? — Jeff Merkley  [0.977/0.989]",
+        "0.42  KXSTATELEG-ORSENA26-R  Oregon State Senate winner? — Republican party  [0.020/0.030]"
       ],
       "polymarket": [
         "0.29  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]",
-        "0.18  562803  Will the Republican Party control the House after the 2026 Midterm elections?  [0.070/0.080]",
-        "0.18  562793  Will the Democratic Party control the Senate after the 2026 Midterm elections?  [0.620/0.630]"
+        "0.18  562793  Will the Democratic Party control the Senate after the 2026 Midterm elections?  [0.620/0.630]",
+        "0.14  3344085  Will the Republican Party candidate win the 2026 Oregon Senate election?  [0.008/0.083]"
       ]
     },
-    "superMarketLast": 0.04
+    "superMarketLast": 0.075
   },
   "978": {
     "title": "Will the Democratic Party win the South Carolina Senate?",
-    "approved": false,
+    "approved": true,
+    "lean": "D",
     "kalshi": {
       "ref": "SENATESC-26-D",
       "invert": false
@@ -5099,17 +5109,17 @@
     "polymarket": null,
     "suggestions": {
       "kalshi": [
-        "0.59  SENATESC-26-D  South Carolina Senate winner? — Annie Andrews  [0.120/0.130]",
-        "0.56  SENATESC-26-R  South Carolina Senate winner? — Darline Graham  [0.870/0.880]",
-        "0.56  GOVPARTYSC-26-D  South Carolina Governor winner? — Jermaine Johnson  [0.050/0.057]"
+        "0.59  SENATESC-26-D  South Carolina Senate winner? — Annie Andrews  [0.140/0.150]",
+        "0.56  SENATESC-26-R  South Carolina Senate winner? — Darline Graham  [0.850/0.860]",
+        "0.31  KXTRUMPSTATESMON-26OCT-SC  Which states will Trump visit in Oct 2026? — South Carolina  [0.110/0.690]"
       ],
       "polymarket": [
         "0.26  562793  Will the Democratic Party control the Senate after the 2026 Midterm elections?  [0.620/0.630]",
-        "0.18  562802  Will the Democratic Party control the House after the 2026 Midterm elections?  [0.920/0.930]",
-        "0.16  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]"
+        "0.16  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]",
+        "0.14  3344127  Will the Democratic Party candidate win the 2026 South Carolina Senate election?  [0.140/0.150]"
       ]
     },
-    "superMarketLast": 0.15
+    "superMarketLast": 0.18
   },
   "979": {
     "title": "Will the Republican Party win the South Carolina Senate?",
@@ -5224,7 +5234,8 @@
   },
   "984": {
     "title": "Will the Democratic Party win the Virginia Senate?",
-    "approved": false,
+    "approved": true,
+    "lean": "D",
     "kalshi": {
       "ref": "SENATEVA-26-D",
       "invert": false
@@ -5232,21 +5243,22 @@
     "polymarket": null,
     "suggestions": {
       "kalshi": [
-        "0.54  SENATEVA-26-D  Virginia Senate winner? — Mark Warner  [0.976/0.987]",
-        "0.50  SENATEVA-26-R  Virginia Senate winner? — Bert Mizusawa  [0.004/0.020]",
-        "0.39  KXVAHOUSEDEM-26NOV03-BELOW6  How many House seats will Democrats win in Virginia? — Below 6  [0.001/0.010]"
+        "0.54  SENATEVA-26-D  Virginia Senate winner? — Mark Warner  [0.979/0.981]",
+        "0.50  SENATEVA-26-R  Virginia Senate winner? — Bert Mizusawa  [0.022/0.027]",
+        "0.32  CONTROLS-2026-D  Which party will win the U.S. Senate? — Democratic Party  [0.600/0.610]"
       ],
       "polymarket": [
         "0.27  562793  Will the Democratic Party control the Senate after the 2026 Midterm elections?  [0.620/0.630]",
-        "0.18  562802  Will the Democratic Party control the House after the 2026 Midterm elections?  [0.920/0.930]",
-        "0.17  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]"
+        "0.17  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]",
+        "0.12  3344162  Will the Democratic Party candidate win the 2026 Virginia Senate election by 0%-3%?  [0.014/0.059]"
       ]
     },
-    "superMarketLast": 0.99
+    "superMarketLast": 0.95
   },
   "985": {
     "title": "Will the Democratic Party win the West Virginia Senate?",
-    "approved": false,
+    "approved": true,
+    "lean": "D",
     "kalshi": {
       "ref": "SENATEWV-26-D",
       "invert": false
@@ -5254,17 +5266,17 @@
     "polymarket": null,
     "suggestions": {
       "kalshi": [
-        "0.53  SENATEWV-26-D  West Virginia Senate winner? — Rachel Fetty Anderson  [0.022/0.024]",
-        "0.51  SENATEWV-26-R  West Virginia Senate winner? — Shelley Moore Capito  [0.972/0.984]",
+        "0.53  SENATEWV-26-D  West Virginia Senate winner? — Rachel Fetty Anderson  [0.004/0.024]",
+        "0.51  SENATEWV-26-R  West Virginia Senate winner? — Shelley Moore Capito  [0.973/0.987]",
         "0.29  KXVOTEGENERAL-SENATEWV-26RAND-24  West Virginia Senate election: Rachel Anderson vote percent — At least 24%  [no quote]"
       ],
       "polymarket": [
         "0.24  562793  Will the Democratic Party control the Senate after the 2026 Midterm elections?  [0.620/0.630]",
-        "0.16  562802  Will the Democratic Party control the House after the 2026 Midterm elections?  [0.920/0.930]",
-        "0.15  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]"
+        "0.15  562794  Will the Republican Party control the Senate after the 2026 Midterm elections?  [0.360/0.370]",
+        "0.15  3344182  Will the Democratic Party candidate win the 2026 West Virginia Senate election?  [0.005/0.025]"
       ]
     },
-    "superMarketLast": 0.025
+    "superMarketLast": 0.04
   },
   "986": {
     "title": "Will the Republican Party win the West Virginia Senate?",
